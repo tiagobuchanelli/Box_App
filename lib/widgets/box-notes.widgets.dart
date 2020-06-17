@@ -8,7 +8,7 @@ class BoxNotes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 16, right: 16, bottom: 10),
+      margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -28,12 +28,12 @@ class BoxNotes extends StatelessWidget {
             //color: Colors.red,
             child: Padding(
               padding: const EdgeInsets.only(
-                  left: 20, right: 20, top: 15, bottom: 10),
+                  left: 16, right: 16, top: 15, bottom: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    "Despesas",
+                    "Contas Correntes",
                     style: GoogleFonts.poppins(
                         textStyle: TextStyle(
                             color: Colors.black87.withOpacity(0.7),

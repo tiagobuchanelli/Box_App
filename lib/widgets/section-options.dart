@@ -15,23 +15,23 @@ class OptionsSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.only(left: 16, right: 16),
+          padding: const EdgeInsets.only(left: 10, right: 10),
           child: Row(
             //mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               _buildContainer(prefixColor + "FFFFFF", context, "Vendas",
-                  "Rel. Vendas", FontAwesomeIcons.edit),
+                  "Rel. Vendas", FontAwesomeIcons.users),
               Padding(
                 padding: EdgeInsets.only(right: 10),
               ),
               _buildContainer(prefixColor + "FFFFFF", context, "Orçamentos",
-                  "Rel. Orçamentos", FontAwesomeIcons.edit),
+                  "Rel. Orçamentos", FontAwesomeIcons.stickyNote),
             ],
           ),
         ),
         Padding(
           padding:
-              const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
+              const EdgeInsets.only(left: 10, right: 10, top: 16, bottom: 16),
           child: Row(
             //mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
@@ -45,7 +45,7 @@ class OptionsSection extends StatelessWidget {
                 padding: EdgeInsets.only(right: 10),
               ),
               _buildContainer(prefixColor + "FFFFFF", context, "Financeiro",
-                  "Lançamentos", FontAwesomeIcons.edit),
+                  "Lançamentos", FontAwesomeIcons.chartLine),
             ],
           ),
         ),
@@ -81,7 +81,8 @@ class OptionsSection extends StatelessWidget {
                 typeC,
                 color: colorBack != "0xffFFFFFF"
                     ? Colors.white
-                    : Theme.of(context).primaryColor.withOpacity(0.9),
+                    : Colors.black.withOpacity(
+                        0.7), //Theme.of(context).primaryColor.withOpacity(0.9),
                 size: 30,
               ),
             ),
@@ -99,7 +100,7 @@ class OptionsSection extends StatelessWidget {
                           textStyle: TextStyle(
                               color: colorBack != "0xffFFFFFF"
                                   ? Colors.white
-                                  : Theme.of(context).accentColor,
+                                  : Colors.black.withOpacity(0.7),
                               //letterSpacing: .0,
                               fontSize: 14,
                               fontWeight: FontWeight.w600)),
@@ -117,7 +118,7 @@ class OptionsSection extends StatelessWidget {
                           textStyle: TextStyle(
                               color: colorBack != "0xffFFFFFF"
                                   ? Colors.white
-                                  : Theme.of(context).accentColor,
+                                  : Colors.black.withOpacity(0.7),
                               //letterSpacing: .0,
                               fontSize: 12,
                               fontWeight: FontWeight.normal)),

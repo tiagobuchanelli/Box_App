@@ -1,4 +1,5 @@
 import 'package:boxapp/store/database-latest-orders.store.dart';
+import 'package:boxapp/widgets/cards/card-last-accounts-balance.dart';
 import 'package:boxapp/widgets/cards/card-last-orders.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,7 +8,7 @@ class AccountBalance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 16, right: 16, bottom: 10),
+      margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -27,7 +28,7 @@ class AccountBalance extends StatelessWidget {
             //color: Colors.red,
             child: Padding(
               padding: const EdgeInsets.only(
-                  left: 20, right: 20, top: 15, bottom: 10),
+                  left: 16, right: 16, top: 15, bottom: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -69,10 +70,10 @@ class AccountBalance extends StatelessWidget {
                     height: 0.8,
                   ),
                 ),
-                itemCount: imgList.length,
+                itemCount: listAccountsBalance.length,
                 itemBuilder: (context, index) => Padding(
                     padding: EdgeInsets.all(0),
-                    child: CardLastOrders(index, imgList)),
+                    child: CardAccountsBalance(index, listAccountsBalance)),
               )),
         ],
       ),

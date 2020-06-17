@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CardLastOrders extends StatelessWidget {
+class CardAccountsBalance extends StatelessWidget {
   int indexPass;
   List listCust;
 
-  CardLastOrders(@required this.indexPass, @required this.listCust);
+  CardAccountsBalance(@required this.indexPass, @required this.listCust);
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +24,10 @@ class CardLastOrders extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Icon(
-                  FontAwesomeIcons.userCircle,
-                  color: Colors.grey[600],
+                  lista[index].type == 'P'
+                      ? FontAwesomeIcons.arrowAltCircleDown
+                      : FontAwesomeIcons.arrowAltCircleUp,
+                  color: lista[index].type == 'P' ? Colors.red : Colors.green,
                   size: 20,
                 ),
               ),

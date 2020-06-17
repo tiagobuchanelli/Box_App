@@ -19,7 +19,7 @@ class _HeaderHomeState extends State<HeaderHome> {
           children: <Widget>[
             Container(
               //padding: EdgeInsets.only(top: 0),
-              color: Theme.of(context).primaryColor,
+              color: Colors.white, //Theme.of(context).primaryColor,
               height: 260,
               /*decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -34,7 +34,7 @@ class _HeaderHomeState extends State<HeaderHome> {
               ),*/
             ),
             Container(
-              height: 86,
+              height: 64,
               decoration: BoxDecoration(
                 color: Colors.grey[100],
                 border: Border.all(width: 0, color: Colors.transparent),
@@ -64,14 +64,14 @@ class _HeaderHomeState extends State<HeaderHome> {
                           textAlign: TextAlign.left,
                           style: GoogleFonts.poppins(
                               textStyle:
-                                  TextStyle(color: Colors.white, fontSize: 24)),
+                                  TextStyle(color: Colors.black, fontSize: 24)),
                         ),
                         Padding(
                           padding: EdgeInsets.only(right: 10),
                         ),
                         Icon(
                           FontAwesomeIcons.caretDown,
-                          color: Colors.white,
+                          color: Colors.black,
                           size: 18,
                         )
                       ],
@@ -85,16 +85,16 @@ class _HeaderHomeState extends State<HeaderHome> {
                 child: Row(
                   children: <Widget>[
                     Icon(
-                      FontAwesomeIcons.solidBell,
-                      color: Colors.white,
+                      FontAwesomeIcons.bell,
+                      color: Colors.black54,
                       size: 22,
                     ),
                     Padding(
                       padding: EdgeInsets.only(right: 10),
                     ),
                     Icon(
-                      FontAwesomeIcons.solidComment,
-                      color: Colors.white,
+                      FontAwesomeIcons.ellipsisV,
+                      color: Colors.black54,
                       size: 22,
                     ),
                     Padding(
@@ -109,7 +109,7 @@ class _HeaderHomeState extends State<HeaderHome> {
         Positioned(
           left: 16,
           right: 16,
-          top: 105,
+          top: 110,
           child: Container(
             height: 100,
             //color: Colors.red,
@@ -121,7 +121,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                       textStyle: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 34,
                           fontWeight: FontWeight.w500)),
                 ),
@@ -130,7 +130,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                       textStyle: TextStyle(
-                    color: Colors.grey[100].withOpacity(0.7),
+                    color: Colors.black.withOpacity(0.7),
                     fontSize: 16,
                   )),
                 )
@@ -139,37 +139,37 @@ class _HeaderHomeState extends State<HeaderHome> {
           ),
         ),
         Positioned(
-          left: 16.0,
-          right: 16.0,
+          left: 0.0,
+          right: 0.0,
           top: 210.0,
           child: Container(
             //color: Colors.pink,
-            height: 120.0,
+            height: 100.0,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               color: Colors.white,
               //border: Border.all(width: 0, color: Colors.red),
-              borderRadius: BorderRadius.all(Radius.circular(8)),
+              //borderRadius: BorderRadius.all(Radius.circular(8)),
               border: Border.all(width: 0, color: Colors.transparent),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey[400].withOpacity(0.4),
-                  spreadRadius: 1,
-                  blurRadius: 1,
+                  color: Colors.grey[300].withOpacity(0.4),
+                  spreadRadius: 0.1,
+                  blurRadius: 0.1,
                   offset: Offset(0, 3), // changes position of shadow
                 ),
               ],
             ),
             child: Container(
               //color: Colors.deepPurple,
-              padding: EdgeInsets.only(left: 10, right: 10),
+              padding: EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Expanded(
                     flex: 1,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
                         Icon(
                           FontAwesomeIcons.donate,
@@ -194,7 +194,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                                       fontWeight: FontWeight.w600)),
                             ),
                             Text(
-                              "R\$5.450,00",
+                              "R\$25.450,00",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
                                   textStyle: TextStyle(
@@ -211,7 +211,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                   Expanded(
                     flex: 1,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         Icon(
                           FontAwesomeIcons.donate,
@@ -236,7 +236,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                                       fontWeight: FontWeight.w600)),
                             ),
                             Text(
-                              "R\$5.450,00",
+                              "R\$45.450,00",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
                                   textStyle: TextStyle(
