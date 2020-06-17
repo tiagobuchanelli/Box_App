@@ -11,45 +11,48 @@ class OptionsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.only(left: 10, right: 10),
-          child: Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              _buildContainer(prefixColor + "FFFFFF", context, "Vendas",
-                  "Rel. Vendas", FontAwesomeIcons.users),
-              Padding(
-                padding: EdgeInsets.only(right: 10),
-              ),
-              _buildContainer(prefixColor + "FFFFFF", context, "Orçamentos",
-                  "Rel. Orçamentos", FontAwesomeIcons.stickyNote),
-            ],
+    return Container(
+      margin: EdgeInsets.only(top: 20),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(left: 10, right: 10),
+            child: Row(
+              //mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                _buildContainer(prefixColor + "FFFFFF", context, "Vendas",
+                    "Rel. Vendas", FontAwesomeIcons.users),
+                Padding(
+                  padding: EdgeInsets.only(right: 10),
+                ),
+                _buildContainer(prefixColor + "FFFFFF", context, "Orçamentos",
+                    "Rel. Orçamentos", FontAwesomeIcons.stickyNote),
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding:
-              const EdgeInsets.only(left: 10, right: 10, top: 16, bottom: 16),
-          child: Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              _buildContainer(
-                  prefixColor + "FFFFFF",
-                  context,
-                  "Relatórios", //2196F3
-                  "Rel. Gerenciais",
-                  FontAwesomeIcons.chartBar),
-              Padding(
-                padding: EdgeInsets.only(right: 10),
-              ),
-              _buildContainer(prefixColor + "FFFFFF", context, "Financeiro",
-                  "Lançamentos", FontAwesomeIcons.chartLine),
-            ],
+          Padding(
+            padding:
+                const EdgeInsets.only(left: 10, right: 10, top: 16, bottom: 0),
+            child: Row(
+              //mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                _buildContainer(
+                    prefixColor + "FFFFFF",
+                    context,
+                    "Relatórios", //2196F3
+                    "Rel. Gerenciais",
+                    FontAwesomeIcons.chartBar),
+                Padding(
+                  padding: EdgeInsets.only(right: 10),
+                ),
+                _buildContainer(prefixColor + "FFFFFF", context, "Financeiro",
+                    "Lançamentos", FontAwesomeIcons.chartLine),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 

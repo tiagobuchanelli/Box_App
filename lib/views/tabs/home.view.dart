@@ -1,6 +1,6 @@
 import 'package:boxapp/widgets/account-balance.widget.dart';
 import 'package:boxapp/widgets/box-flex-points.widgets.dart';
-import 'package:boxapp/widgets/box-notes.widgets.dart';
+import 'package:boxapp/widgets/box-bank-accounts.widgets.dart';
 import 'package:boxapp/widgets/header-home.widgets.dart';
 import 'package:boxapp/widgets/latest-orders.widget.dart';
 import 'package:boxapp/widgets/section-options.dart';

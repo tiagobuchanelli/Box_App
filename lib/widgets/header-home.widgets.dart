@@ -34,7 +34,7 @@ class _HeaderHomeState extends State<HeaderHome> {
               ),*/
             ),
             Container(
-              height: 64,
+              height: 42,
               decoration: BoxDecoration(
                 color: Colors.grey[100],
                 border: Border.all(width: 0, color: Colors.transparent),
@@ -64,7 +64,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                           textAlign: TextAlign.left,
                           style: GoogleFonts.poppins(
                               textStyle:
-                                  TextStyle(color: Colors.black, fontSize: 24)),
+                                  TextStyle(color: Colors.black, fontSize: 20)),
                         ),
                         Padding(
                           padding: EdgeInsets.only(right: 10),
@@ -72,7 +72,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                         Icon(
                           FontAwesomeIcons.caretDown,
                           color: Colors.black,
-                          size: 18,
+                          size: 16,
                         )
                       ],
                     ),
@@ -87,7 +87,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                     Icon(
                       FontAwesomeIcons.bell,
                       color: Colors.black54,
-                      size: 22,
+                      size: 20,
                     ),
                     Padding(
                       padding: EdgeInsets.only(right: 10),
@@ -95,7 +95,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                     Icon(
                       FontAwesomeIcons.ellipsisV,
                       color: Colors.black54,
-                      size: 22,
+                      size: 20,
                     ),
                     Padding(
                       padding: EdgeInsets.only(right: 16),
@@ -122,7 +122,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                   style: GoogleFonts.poppins(
                       textStyle: TextStyle(
                           color: Colors.black,
-                          fontSize: 34,
+                          fontSize: 30,
                           fontWeight: FontWeight.w500)),
                 ),
                 Text(
@@ -141,7 +141,7 @@ class _HeaderHomeState extends State<HeaderHome> {
         Positioned(
           left: 0.0,
           right: 0.0,
-          top: 210.0,
+          top: 200.0,
           child: Container(
             //color: Colors.pink,
             height: 100.0,

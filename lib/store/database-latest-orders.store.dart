@@ -21,3 +21,14 @@ final List<AccountsBalance> listAccountsBalance = <AccountsBalance>[
   new AccountsBalance(
       'Roberto Carlos', 'R\$6.500,00', '10/02/2020', '0xff13C726', 'R'),
 ];
+
+final List<AccountsBalance> listBankAccounts = <AccountsBalance>[
+  new AccountsBalance(
+      'Carteira', 'R\$2.500,00', '10/02/2020', '0xff13C726', 'C'),
+  new AccountsBalance(
+      'Banco Inter', 'R\$400,00', '10/02/2020', '0xff13C726', 'B'),
+  new AccountsBalance('Bradesco', 'R\$900,00', '10/02/2020', '0xff13C726', 'B'),
+  new AccountsBalance('Nubank', 'R\$8.500,00', '10/02/2020', '0xff138BC7', 'B'),
+  new AccountsBalance(
+      'Poupança BB', 'R\$8.500,00', '10/02/2020', '0xff138BC7', 'P'),
+];
