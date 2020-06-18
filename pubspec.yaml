@@ -31,6 +31,7 @@ dependencies:
   hive: ^1.4.1+1
   hive_flutter: ^0.3.0+2
   fl_chart: ^0.9.4
+  flutter_circular_chart: ^0.1.0
 
 dev_dependencies:
   flutter_test:

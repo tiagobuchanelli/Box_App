@@ -21,7 +21,7 @@ class AccountBalance extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    "Contas",
+                    "Próximos Lançamentos",
                     style: GoogleFonts.poppins(
                         textStyle: TextStyle(
                             color: Colors.black87.withOpacity(0.7),
@@ -54,17 +54,17 @@ class AccountBalance extends StatelessWidget {
                   ),
                 ],
               ),
-              child: ListView.separated(
+              child: ListView.builder(
                 padding: EdgeInsets.all(0),
                 primary: false, //using listview and SingleChildScrollView
                 shrinkWrap: true, //using listview and SingleChildScrollView
-                separatorBuilder: (context, index) => Padding(
+                /*separatorBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.only(left: 15, right: 15),
                   child: Divider(
                     color: Colors.grey[400],
                     height: 0.8,
                   ),
-                ),
+                ),*/
                 itemCount: listAccountsBalance.length,
                 itemBuilder: (context, index) => Padding(
                     padding: EdgeInsets.all(0),

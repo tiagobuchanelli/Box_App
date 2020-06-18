@@ -17,7 +17,7 @@ class CardAccountsBalance extends StatelessWidget {
     return Container(
       child: Row(
         children: <Widget>[
-          Expanded(
+          /*Expanded(
             flex: 1,
             child: Padding(
               padding: EdgeInsets.only(left: 16),
@@ -25,36 +25,62 @@ class CardAccountsBalance extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Icon(
                   lista[index].type == 'P'
-                      ? FontAwesomeIcons.arrowAltCircleDown
-                      : FontAwesomeIcons.arrowAltCircleUp,
+                      ? FontAwesomeIcons.flag
+                      : FontAwesomeIcons.flag,
                   color: lista[index].type == 'P' ? Colors.red : Colors.green,
-                  size: 20,
+                  size: 25,
                 ),
               ),
             ),
-          ),
+          ),*/
           Expanded(
-            flex: 9,
+            flex: 1,
             child: ListTile(
               //leading: Icon(Icons.people),
               title: Text(
                 lista[index].name,
                 style: GoogleFonts.poppins(
                     textStyle: TextStyle(
-                        color: Colors.grey[600],
+                        color: Colors.black,
                         //letterSpacing: .0,
                         fontSize: 14,
                         fontWeight: FontWeight.normal)),
               ),
-              trailing: Text(
+              subtitle: Text(
                 lista[index].price,
-                textAlign: TextAlign.right,
+                //textAlign: TextAlign.right,
                 style: GoogleFonts.poppins(
                     textStyle: TextStyle(
-                        color: Colors.grey[700],
+                        color: Colors.grey,
                         //letterSpacing: .0,
                         fontSize: 14,
-                        fontWeight: FontWeight.w500)),
+                        fontWeight: FontWeight.normal)),
+              ),
+              trailing: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Icon(
+                    lista[index].type == 'P'
+                        ? FontAwesomeIcons.flag
+                        : FontAwesomeIcons.flag,
+                    color: lista[index].type == 'P' ? Colors.red : Colors.green,
+                    size: 16,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 10),
+                  ),
+                  Text(
+                    "20/06/2020",
+                    textAlign: TextAlign.right,
+                    style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                            color: Colors.grey[700],
+                            //letterSpacing: .0,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500)),
+                  ),
+                ],
               ),
               //subtitle: Text(lista[index].date),
             ),
