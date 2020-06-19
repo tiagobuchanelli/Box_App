@@ -1,3 +1,4 @@
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -63,9 +64,9 @@ class _HeaderHomeState extends State<HeaderHome> {
                         Text(
                           "Junho ",
                           textAlign: TextAlign.left,
-                          style: GoogleFonts.poppins(
-                              textStyle:
-                                  TextStyle(color: Colors.black, fontSize: 20)),
+                          style: AppTheme()
+                              .textTheme
+                              .title, //Caso precisar subrescrever o método AppTheme().textTheme.title.copyWith(color: Colors.red, fontSize: 45, fontWeight: FontWeight.w600)
                         ),
                         Padding(
                           padding: EdgeInsets.only(right: 10),
@@ -143,21 +144,11 @@ class _HeaderHomeState extends State<HeaderHome> {
                     : Text(
                         "R\$ 280.000,00 ",
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
-                                color: Colors.black87,
-                                fontSize: 30,
-                                fontWeight: FontWeight.normal)),
+                        style: AppTheme().textTheme.display1,
                       ),
-                Text(
-                  "Saldo Atual",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                          color: Colors.black.withOpacity(0.6),
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500)),
-                )
+                Text("Saldo Atual",
+                    textAlign: TextAlign.center,
+                    style: AppTheme().textTheme.display2),
               ],
             ),
           ),
@@ -186,7 +177,7 @@ class _HeaderHomeState extends State<HeaderHome> {
             ),
             child: Container(
               //color: Colors.deepPurple,
-              padding: EdgeInsets.only(left: 25, right: 25),
+              padding: EdgeInsets.only(left: 30, right: 30),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[

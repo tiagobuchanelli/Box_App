@@ -1,3 +1,4 @@
+import 'package:boxapp/utils/appBarBase.dart';
 import 'package:boxapp/widgets/list-customers.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -8,31 +9,9 @@ class CustomersView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[100],
-        appBar: AppBar(
-          title: Container(
-            //color: Colors.yellow,
-            child: Text(
-              "Clientes",
-              textAlign: TextAlign.left,
-              style: GoogleFonts.poppins(
-                  textStyle: TextStyle(color: Colors.white, fontSize: 24)),
-            ),
-          ),
-          actions: <Widget>[
-            Align(
-              alignment: Alignment.centerRight,
-              child: Padding(
-                padding: EdgeInsets.only(right: 20),
-                child: Icon(
-                  FontAwesomeIcons.search,
-                  color: Colors.white,
-                  size: 22,
-                ),
-              ),
-            )
-          ],
-          elevation: 0,
-          backgroundColor: Theme.of(context).primaryColor,
+        appBar: BaseAppBar(
+          backgroundColor: Colors.white,
+          title: "Clientes",
         ),
         body: SingleChildScrollView(
           child: Column(

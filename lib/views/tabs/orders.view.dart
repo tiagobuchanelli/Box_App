@@ -1,4 +1,5 @@
 import 'package:boxapp/store/database-orders.store.dart';
+import 'package:boxapp/utils/appBarBase.dart';
 import 'package:boxapp/views/checkout.view.dart';
 import 'package:boxapp/widgets/cards/card-orders.dart';
 import 'package:flutter/material.dart';
@@ -10,31 +11,9 @@ class OrdersView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      appBar: AppBar(
-        title: Container(
-          //color: Colors.yellow,
-          child: Text(
-            "Carrinho",
-            textAlign: TextAlign.left,
-            style: GoogleFonts.poppins(
-                textStyle: TextStyle(color: Colors.white, fontSize: 24)),
-          ),
-        ),
-        actions: <Widget>[
-          Align(
-            alignment: Alignment.centerRight,
-            child: Padding(
-              padding: EdgeInsets.only(right: 20),
-              child: Icon(
-                FontAwesomeIcons.ellipsisV,
-                color: Colors.white,
-                size: 22,
-              ),
-            ),
-          )
-        ],
-        elevation: 0,
-        backgroundColor: Theme.of(context).primaryColor,
+      appBar: BaseAppBar(
+        backgroundColor: Colors.white,
+        title: "Carrinho",
       ),
       body: Column(
         children: <Widget>[

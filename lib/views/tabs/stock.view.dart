@@ -25,11 +25,6 @@ class _StockViewState extends State<StockView> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: Color(0xff4f78fc),
-        statusBarBrightness: Brightness.dark, //
-        statusBarIconBrightness: Brightness.light // status bar color
-        ));
   }
 
   @override
