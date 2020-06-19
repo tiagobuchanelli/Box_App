@@ -4,6 +4,7 @@ import 'package:boxapp/views/tabs/menu.view.dart';
 import 'package:boxapp/views/tabs/orders.view.dart';
 import 'package:boxapp/views/tabs/stock.view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TabsPageView extends StatefulWidget {
@@ -25,8 +26,8 @@ class _TabsPageViewState extends State<TabsPageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: _bottomNavigationBar(_currentIndex, context),
       body: pages[_currentIndex],
+      bottomNavigationBar: _bottomNavigationBar(_currentIndex, context),
     );
   }
 
@@ -90,7 +91,7 @@ class _TabsPageViewState extends State<TabsPageView> {
             ),
             title: Padding(
               padding: const EdgeInsets.only(top: 5),
-              child: Text('Menu'),
+              child: Text('Outros'),
             ),
           ),
         ],

@@ -141,7 +141,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                         ),
                       )
                     : Text(
-                        "R\$ 11.318,26 ",
+                        "R\$ 280.000,00 ",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
                             textStyle: TextStyle(
@@ -186,7 +186,7 @@ class _HeaderHomeState extends State<HeaderHome> {
             ),
             child: Container(
               //color: Colors.deepPurple,
-              padding: EdgeInsets.only(left: 20, right: 20),
+              padding: EdgeInsets.only(left: 25, right: 25),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
@@ -228,7 +228,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                                     ),
                                   )
                                 : Text(
-                                    "R\$25.450,00",
+                                    "R\$425.450,00",
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
                                         textStyle: TextStyle(
@@ -281,7 +281,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                                     ),
                                   )
                                 : Text(
-                                    "R\$45.450,00",
+                                    "R\$145.450,00",
                                     textAlign: TextAlign.left,
                                     style: GoogleFonts.poppins(
                                         textStyle: TextStyle(
