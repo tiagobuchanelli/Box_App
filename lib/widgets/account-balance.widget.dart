@@ -21,7 +21,7 @@ class AccountBalance extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    "Próximos Lançamentos",
+                    "Lançamentos à Pagar",
                     style: GoogleFonts.poppins(
                         textStyle: TextStyle(
                             color: Colors.black87.withOpacity(0.7),
@@ -40,36 +40,54 @@ class AccountBalance extends StatelessWidget {
           ),
           //Divider(height: 0.5, color: Colors.grey[300]),
           Container(
-              padding: EdgeInsets.only(top: 0, bottom: 10),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(8)),
-                border: Border.all(width: 0, color: Colors.transparent),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey[300].withOpacity(0.8),
-                    spreadRadius: 1,
-                    blurRadius: 1,
-                    offset: Offset(0, 2), // changes position of shadow
-                  ),
-                ],
-              ),
-              child: ListView.builder(
-                padding: EdgeInsets.all(0),
-                primary: false, //using listview and SingleChildScrollView
-                shrinkWrap: true, //using listview and SingleChildScrollView
-                /*separatorBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.only(left: 15, right: 15),
-                  child: Divider(
-                    color: Colors.grey[400],
-                    height: 0.8,
-                  ),
-                ),*/
-                itemCount: listAccountsBalance.length,
-                itemBuilder: (context, index) => Padding(
+            padding: EdgeInsets.only(top: 10, bottom: 5),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+              border: Border.all(width: 0, color: Colors.transparent),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey[300].withOpacity(0.8),
+                  spreadRadius: 1,
+                  blurRadius: 1,
+                  offset: Offset(0, 2), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Column(
+              children: <Widget>[
+                ListView.builder(
+                  padding: EdgeInsets.all(0),
+                  primary: false, //using listview and SingleChildScrollView
+                  shrinkWrap: true, //using listview and SingleChildScrollView
+                  itemCount: listAccountsBalance.length,
+                  itemBuilder: (context, index) => Padding(
                     padding: EdgeInsets.all(0),
-                    child: CardAccountsBalance(index, listAccountsBalance)),
-              )),
+                    child: CardAccountsBalance(index, listAccountsBalance),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: FlatButton(
+                        splashColor:
+                            Theme.of(context).primaryColor.withOpacity(0.3),
+                        child: Text(
+                          "DETALHES",
+                          //textAlign: TextAlign.left,
+                          style:
+                              TextStyle(color: Theme.of(context).primaryColor),
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );

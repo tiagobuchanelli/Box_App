@@ -9,6 +9,7 @@ class HeaderHome extends StatefulWidget {
 
 class _HeaderHomeState extends State<HeaderHome> {
   bool isChecked = false;
+  bool isHideVal = false;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class _HeaderHomeState extends State<HeaderHome> {
             Container(
               //padding: EdgeInsets.only(top: 0),
               color: Colors.white, //Theme.of(context).primaryColor,
-              height: 260,
+              height: 253,
               /*decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -84,13 +85,26 @@ class _HeaderHomeState extends State<HeaderHome> {
                 height: 40,
                 child: Row(
                   children: <Widget>[
-                    Icon(
-                      FontAwesomeIcons.bell,
-                      color: Colors.black54,
-                      size: 20,
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          isHideVal = !isHideVal;
+                        });
+                      },
+                      child: isHideVal
+                          ? Icon(
+                              FontAwesomeIcons.eyeSlash,
+                              color: Colors.black54,
+                              size: 20,
+                            )
+                          : Icon(
+                              FontAwesomeIcons.eye,
+                              color: Colors.black54,
+                              size: 20,
+                            ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(right: 10),
+                      padding: EdgeInsets.only(right: 15),
                     ),
                     Icon(
                       FontAwesomeIcons.ellipsisV,
@@ -116,23 +130,33 @@ class _HeaderHomeState extends State<HeaderHome> {
             alignment: Alignment.center,
             child: Column(
               children: <Widget>[
-                Text(
-                  "R\$10.500,00 ",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                          color: Colors.black,
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500)),
-                ),
+                isHideVal
+                    ? Padding(
+                        padding: const EdgeInsets.only(top: 0, bottom: 10),
+                        child: Container(
+                          padding: EdgeInsets.only(top: 0),
+                          color: Colors.grey[300],
+                          height: 15,
+                          width: 150,
+                        ),
+                      )
+                    : Text(
+                        "R\$ 11.318,26 ",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                                color: Colors.black87,
+                                fontSize: 30,
+                                fontWeight: FontWeight.normal)),
+                      ),
                 Text(
                   "Saldo Atual",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                       textStyle: TextStyle(
-                    color: Colors.black.withOpacity(0.7),
-                    fontSize: 16,
-                  )),
+                          color: Colors.black.withOpacity(0.6),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500)),
                 )
               ],
             ),
@@ -141,7 +165,7 @@ class _HeaderHomeState extends State<HeaderHome> {
         Positioned(
           left: 0.0,
           right: 0.0,
-          top: 200.0,
+          top: 198.0,
           child: Container(
             //color: Colors.pink,
             height: 100.0,
@@ -173,8 +197,8 @@ class _HeaderHomeState extends State<HeaderHome> {
                       children: <Widget>[
                         Icon(
                           FontAwesomeIcons.donate,
-                          color: Colors.green.withOpacity(0.7),
-                          size: 40,
+                          color: Colors.green.withOpacity(0.9),
+                          size: 35,
                         ),
                         Padding(
                           padding: EdgeInsets.only(right: 10),
@@ -188,21 +212,32 @@ class _HeaderHomeState extends State<HeaderHome> {
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
                                   textStyle: TextStyle(
-                                      color: Colors.black87.withOpacity(0.7),
+                                      color: Colors.black.withOpacity(0.6),
                                       //letterSpacing: .0,
                                       fontSize: 14,
-                                      fontWeight: FontWeight.w600)),
+                                      fontWeight: FontWeight.w500)),
                             ),
-                            Text(
-                              "R\$25.450,00",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                      color: Colors.green.withOpacity(0.7),
-                                      //letterSpacing: .0,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600)),
-                            )
+                            isHideVal
+                                ? Padding(
+                                    padding: const EdgeInsets.only(top: 10.0),
+                                    child: Container(
+                                      padding: EdgeInsets.only(top: 0),
+                                      color: Colors.grey[300],
+                                      height: 10,
+                                      width: 100,
+                                    ),
+                                  )
+                                : Text(
+                                    "R\$25.450,00",
+                                    textAlign: TextAlign.left,
+                                    style: GoogleFonts.poppins(
+                                        textStyle: TextStyle(
+                                            color:
+                                                Colors.green.withOpacity(0.9),
+                                            //letterSpacing: .0,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500)),
+                                  )
                           ],
                         ),
                       ],
@@ -215,8 +250,8 @@ class _HeaderHomeState extends State<HeaderHome> {
                       children: <Widget>[
                         Icon(
                           FontAwesomeIcons.donate,
-                          color: Colors.red.withOpacity(0.7),
-                          size: 40,
+                          color: Colors.red.withOpacity(0.9),
+                          size: 35,
                         ),
                         Padding(
                           padding: EdgeInsets.only(right: 10),
@@ -230,21 +265,31 @@ class _HeaderHomeState extends State<HeaderHome> {
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
                                   textStyle: TextStyle(
-                                      color: Colors.black87.withOpacity(0.7),
+                                      color: Colors.black.withOpacity(0.6),
                                       //letterSpacing: .0,
                                       fontSize: 14,
-                                      fontWeight: FontWeight.w600)),
+                                      fontWeight: FontWeight.w500)),
                             ),
-                            Text(
-                              "R\$45.450,00",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                      color: Colors.red.withOpacity(0.7),
-                                      //letterSpacing: .0,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600)),
-                            )
+                            isHideVal
+                                ? Padding(
+                                    padding: const EdgeInsets.only(top: 10.0),
+                                    child: Container(
+                                      padding: EdgeInsets.only(top: 0),
+                                      color: Colors.grey[300],
+                                      height: 10,
+                                      width: 100,
+                                    ),
+                                  )
+                                : Text(
+                                    "R\$45.450,00",
+                                    textAlign: TextAlign.left,
+                                    style: GoogleFonts.poppins(
+                                        textStyle: TextStyle(
+                                            color: Colors.red.withOpacity(0.9),
+                                            //letterSpacing: .0,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500)),
+                                  )
                           ],
                         ),
                       ],

@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class CardBankAccount extends StatelessWidget {
   int indexPass;
   List listCust;
+  String prefixColor = '0xff';
 
   CardBankAccount(@required this.indexPass, @required this.listCust);
 
@@ -37,7 +38,7 @@ class CardBankAccount extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Icon(
                   _buildIcon(lista[index].type),
-                  color: Colors.green,
+                  color: Color(int.parse(prefixColor + lista[index].color)),
                   size: 25,
                 ),
               ),
@@ -67,7 +68,7 @@ class CardBankAccount extends StatelessWidget {
               ),
               trailing: Icon(
                 FontAwesomeIcons.plus,
-                color: Colors.green,
+                color: Theme.of(context).primaryColor,
                 size: 16,
               ),
               //subtitle: Text(lista[index].date),

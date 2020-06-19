@@ -60,7 +60,7 @@ class CardAccountsBalance extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Icon(
+                  /*Icon(
                     lista[index].type == 'P'
                         ? FontAwesomeIcons.flag
                         : FontAwesomeIcons.flag,
@@ -69,7 +69,7 @@ class CardAccountsBalance extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.only(right: 10),
-                  ),
+                  ),*/
                   Text(
                     "20/06/2020",
                     textAlign: TextAlign.right,

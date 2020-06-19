@@ -13,7 +13,7 @@ class LatestOrders extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-            //color: Colors.red,
+            color: Colors.grey[100],
             child: Padding(
               padding:
                   const EdgeInsets.only(left: 5, right: 0, top: 0, bottom: 15),
@@ -26,7 +26,7 @@ class LatestOrders extends StatelessWidget {
                         textStyle: TextStyle(
                             color: Colors.black87.withOpacity(0.7),
                             //letterSpacing: .0,
-                            fontSize: 18,
+                            fontSize: 20,
                             fontWeight: FontWeight.w600)),
                   ),
                   Icon(
@@ -40,36 +40,54 @@ class LatestOrders extends StatelessWidget {
           ),
           //Divider(height: 0.5, color: Colors.grey[300]),
           Container(
-              padding: EdgeInsets.only(top: 0, bottom: 10),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(8)),
-                border: Border.all(width: 0, color: Colors.transparent),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey[300].withOpacity(0.8),
-                    spreadRadius: 1,
-                    blurRadius: 1,
-                    offset: Offset(0, 2), // changes position of shadow
-                  ),
-                ],
-              ),
-              child: ListView.builder(
-                padding: EdgeInsets.all(0),
-                primary: false, //using listview and SingleChildScrollView
-                shrinkWrap: true, //using listview and SingleChildScrollView
-                /*separatorBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.only(left: 15, right: 15),
-                  child: Divider(
-                    color: Colors.grey[400],
-                    height: 0.8,
-                  ),
-                ),*/
-                itemCount: listAccountsBalance.length,
-                itemBuilder: (context, index) => Padding(
+            padding: EdgeInsets.only(top: 10, bottom: 5),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+              border: Border.all(width: 0, color: Colors.transparent),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey[300].withOpacity(0.8),
+                  spreadRadius: 1,
+                  blurRadius: 1,
+                  offset: Offset(0, 2), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Column(
+              children: <Widget>[
+                ListView.builder(
+                  padding: EdgeInsets.all(0),
+                  primary: false, //using listview and SingleChildScrollView
+                  shrinkWrap: true, //using listview and SingleChildScrollView
+                  itemCount: lastOrders.length,
+                  itemBuilder: (context, index) => Padding(
                     padding: EdgeInsets.all(0),
-                    child: CardAccountsBalance(index, listAccountsBalance)),
-              )),
+                    child: CardAccountsBalance(index, lastOrders),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: FlatButton(
+                        splashColor:
+                            Theme.of(context).primaryColor.withOpacity(0.3),
+                        child: Text(
+                          "DETALES",
+                          //textAlign: TextAlign.left,
+                          style:
+                              TextStyle(color: Theme.of(context).primaryColor),
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );

@@ -7,7 +7,7 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   final ThemeData temaPadrao = ThemeData(
       //primaryColor:
-      primaryColor: Color(0xff4f78fc), //Color(0xff00A6FF),
+      primaryColor: Color(0xff2196F3), //Color(0xff00A6FF),
       accentColor: Colors.blueAccent //Color(0xff25D366),
       );
 
