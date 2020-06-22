@@ -1,3 +1,4 @@
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,7 +9,7 @@ class InfoAddress extends StatelessWidget {
     return Container(
       //height: 400,
       width: double.infinity,
-      margin: EdgeInsets.only(left: 16, right: 16, bottom: 10, top: 0),
+      margin: EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -35,12 +36,10 @@ class InfoAddress extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Endereço",
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: Colors.black87,
-                            //letterSpacing: .0,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600)),
+                    style: AppTheme()
+                        .textTheme
+                        .title
+                        .copyWith(fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
@@ -57,34 +56,36 @@ class InfoAddress extends StatelessWidget {
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.only(bottom: 5),
-                      child: Icon(
-                        FontAwesomeIcons.building,
-                        color: Colors.black87,
-                        size: 16,
+                      child: Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.all(Radius.circular(4)),
+                          border:
+                              Border.all(width: 0, color: Colors.transparent),
+                        ),
+                        child: Icon(
+                          FontAwesomeIcons.mapMarkerAlt,
+                          color: Colors.black87,
+                          size: 16,
+                        ),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(right: 15),
                     ),
                     Text(
-                      "Ex: rua, Avenida nº ",
+                      "Endereço não informado",
                       style: GoogleFonts.poppins(
                           textStyle: TextStyle(
                               color: Colors.black87,
                               //letterSpacing: .0,
-                              fontSize: 14,
+                              fontSize: 16,
                               fontWeight: FontWeight.normal)),
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                      left: 20, right: 0, top: 15, bottom: 15),
-                  child: Divider(
-                    height: 0.8,
-                    color: Colors.grey[700],
-                  ),
-                ),
+                SizedBox(height: 20),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Container(
@@ -93,11 +94,30 @@ class InfoAddress extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(4)),
                       color: Theme.of(context).primaryColor,
                     ),
-                    child: FlatButton(
-                      child: Text(
-                        "BUSCAR CEP",
-                        style: TextStyle(color: Colors.white),
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(left: 10),
+                        ),
+                        Icon(
+                          FontAwesomeIcons.plusCircle,
+                          color: Colors.white,
+                          size: 12,
+                        ),
+                        FlatButton(
+                          child: Text(
+                            "Endereço",
+                            style: GoogleFonts.poppins(
+                                textStyle: TextStyle(
+                                    color: Colors.white,
+                                    //letterSpacing: .0,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.normal)),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 )

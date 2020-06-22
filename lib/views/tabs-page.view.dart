@@ -1,7 +1,7 @@
 import 'package:boxapp/views/tabs/customers.view.dart';
 import 'package:boxapp/views/tabs/home.view.dart';
 import 'package:boxapp/views/tabs/menu.view.dart';
-import 'package:boxapp/views/tabs/orders.view.dart';
+import 'package:boxapp/views/shopping-cart.view.dart';
 import 'package:boxapp/views/tabs/stock.view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
@@ -19,7 +19,6 @@ class _TabsPageViewState extends State<TabsPageView> {
     HomeView(),
     StockView(),
     CustomersView(),
-    OrdersView(),
     Menuview()
   ];
 
@@ -72,16 +71,6 @@ class _TabsPageViewState extends State<TabsPageView> {
             title: Padding(
               padding: const EdgeInsets.only(top: 5),
               child: Text('Clientes'),
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              FontAwesomeIcons.shoppingCart,
-              size: 20,
-            ),
-            title: Padding(
-              padding: const EdgeInsets.only(top: 5),
-              child: Text('Carrinho'),
             ),
           ),
           BottomNavigationBarItem(

@@ -1,3 +1,4 @@
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,7 +9,7 @@ class InfoTotalPayment extends StatelessWidget {
     return Container(
       height: 100,
       width: double.infinity,
-      margin: EdgeInsets.only(left: 0, right: 0, bottom: 0, top: 10),
+      margin: EdgeInsets.only(left: 0, right: 0, bottom: 0, top: 5),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
@@ -40,21 +41,17 @@ class InfoTotalPayment extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "TOTAL",
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: Colors.black87,
-                            //letterSpacing: .0,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500)),
+                    style: AppTheme()
+                        .textTheme
+                        .title
+                        .copyWith(fontWeight: FontWeight.w600, fontSize: 18),
                   ),
                   Text(
                     "R\$4250",
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
-                            //letterSpacing: .0,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600)),
+                    style: AppTheme().textTheme.title.copyWith(
+                        color: Theme.of(context).primaryColor,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18),
                   ),
                 ],
               ),
@@ -74,12 +71,10 @@ class InfoTotalPayment extends StatelessWidget {
               child: FlatButton(
                 child: Text(
                   "FINALIZAR",
-                  style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                          color: Colors.white,
-                          //letterSpacing: .0,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600)),
+                  style: AppTheme().textTheme.title.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16),
                 ),
                 onPressed: () {},
               ),

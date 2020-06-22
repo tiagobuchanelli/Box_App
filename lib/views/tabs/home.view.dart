@@ -1,4 +1,5 @@
 import 'package:boxapp/utils/spinner.utils.dart';
+import 'package:boxapp/utils/treatments/RouteGenerator.dart';
 import 'package:boxapp/widgets/account-balance.widget.dart';
 import 'package:boxapp/widgets/box-goals.widgets.dart';
 import 'package:boxapp/widgets/box-bank-accounts.widgets.dart';
@@ -55,8 +56,8 @@ class _HomeViewState extends State<HomeView> {
         //animatedIcon: AnimatedIcons.menu_close,
         //animatedIconTheme: IconThemeData(size: 22.0),
         //tooltip: "teste",
-        //overlayColor: Colors.black,
-        //overlayOpacity: 0.7,
+        overlayColor: Colors.black,
+        overlayOpacity: 0.2,
         shape: CircleBorder(),
         elevation: 4,
         onOpen: () => print("Aberto"),
@@ -65,87 +66,88 @@ class _HomeViewState extends State<HomeView> {
           SpeedDialChild(
             child: Icon(
               FontAwesomeIcons.cubes,
-              color: Colors.white,
+              color: Theme.of(context).primaryColor,
               size: 20,
             ),
             label: "Venda",
             labelStyle: GoogleFonts.poppins(
                 textStyle: TextStyle(
-                    color: Colors.white,
+                    color: Theme.of(context).primaryColor,
                     //letterSpacing: .0,
                     fontSize: 14,
                     fontWeight: FontWeight.normal)),
-            backgroundColor: Theme.of(context).primaryColor,
-            labelBackgroundColor: Theme.of(context).primaryColor,
-            onTap: () {},
+            backgroundColor: Colors.white,
+            labelBackgroundColor: Colors.white,
+            onTap: () {
+              Navigator.pushNamed(context, RouteGenerator.shoppingCart);
+            },
           ),
           SpeedDialChild(
             child: Icon(
               FontAwesomeIcons.stickyNote,
-              color: Colors.white,
+              color: Theme.of(context).primaryColor,
               size: 20,
             ),
             label: "Orçamento",
             labelStyle: GoogleFonts.poppins(
                 textStyle: TextStyle(
-                    color: Colors.white,
+                    color: Theme.of(context).primaryColor,
                     //letterSpacing: .0,
                     fontSize: 14,
                     fontWeight: FontWeight.normal)),
-            backgroundColor: Theme.of(context).primaryColor,
-            labelBackgroundColor: Theme.of(context).primaryColor,
+            backgroundColor: Colors.white,
+            labelBackgroundColor: Colors.white,
             onTap: () {},
           ),
           SpeedDialChild(
             child: Icon(
               FontAwesomeIcons.arrowAltCircleUp,
-              color: Colors.white,
+              color: Theme.of(context).primaryColor,
               size: 20,
             ),
             label: "Receita",
             labelStyle: GoogleFonts.poppins(
                 textStyle: TextStyle(
-                    color: Colors.white,
+                    color: Theme.of(context).primaryColor,
                     //letterSpacing: .0,
                     fontSize: 14,
                     fontWeight: FontWeight.normal)),
-            backgroundColor: Colors.green.withOpacity(0.8),
-            labelBackgroundColor: Colors.green.withOpacity(0.8),
+            backgroundColor: Colors.white,
+            labelBackgroundColor: Colors.white,
             onTap: () {},
           ),
           SpeedDialChild(
             child: Icon(
               FontAwesomeIcons.arrowAltCircleDown,
-              color: Colors.white,
+              color: Theme.of(context).primaryColor,
               size: 20,
             ),
             label: "Despesa",
             labelStyle: GoogleFonts.poppins(
                 textStyle: TextStyle(
-                    color: Colors.white,
+                    color: Theme.of(context).primaryColor,
                     //letterSpacing: .0,
                     fontSize: 14,
                     fontWeight: FontWeight.normal)),
-            backgroundColor: Colors.red.withOpacity(0.8),
-            labelBackgroundColor: Colors.red.withOpacity(0.8),
+            backgroundColor: Colors.white,
+            labelBackgroundColor: Colors.white,
             onTap: () {},
           ),
           SpeedDialChild(
             child: Icon(
               FontAwesomeIcons.exchangeAlt,
-              color: Colors.white,
+              color: Theme.of(context).primaryColor,
               size: 20,
             ),
             label: "Transferência",
             labelStyle: GoogleFonts.poppins(
                 textStyle: TextStyle(
-                    color: Colors.white,
+                    color: Theme.of(context).primaryColor,
                     //letterSpacing: .0,
                     fontSize: 14,
                     fontWeight: FontWeight.normal)),
-            backgroundColor: Theme.of(context).primaryColor.withOpacity(0.6),
-            labelBackgroundColor:
-                Theme.of(context).primaryColor.withOpacity(0.6),
+            backgroundColor: Colors.white,
+            labelBackgroundColor: Colors.white,
             onTap: () {},
           ),
         ],

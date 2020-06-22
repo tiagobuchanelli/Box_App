@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class InfoPayment extends StatelessWidget {
+class InfoCustomer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,33 +35,12 @@ class InfoPayment extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    "Forma de Pagamento",
+                    "Cliente",
                     style: AppTheme()
                         .textTheme
                         .title
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      Icon(
-                        FontAwesomeIcons.creditCard,
-                        color: Colors.black87,
-                        size: 16,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(right: 10),
-                      ),
-                      Icon(
-                        FontAwesomeIcons.ccVisa,
-                        color: Colors.black87,
-                        size: 16,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(right: 10),
-                      ),
-                    ],
-                  )
                 ],
               ),
             ),
@@ -86,7 +65,7 @@ class InfoPayment extends StatelessWidget {
                               Border.all(width: 0, color: Colors.transparent),
                         ),
                         child: Icon(
-                          FontAwesomeIcons.creditCard,
+                          FontAwesomeIcons.user,
                           color: Colors.black87,
                           size: 16,
                         ),
@@ -96,7 +75,7 @@ class InfoPayment extends StatelessWidget {
                       padding: EdgeInsets.only(right: 15),
                     ),
                     Text(
-                      "Dinheiro",
+                      "Consumidor",
                       style: GoogleFonts.poppins(
                           textStyle: TextStyle(
                               color: Colors.black87,
@@ -129,7 +108,7 @@ class InfoPayment extends StatelessWidget {
                         ),
                         FlatButton(
                           child: Text(
-                            "Forma de Pagamento",
+                            "Cliente",
                             style: GoogleFonts.poppins(
                                 textStyle: TextStyle(
                                     color: Colors.white,

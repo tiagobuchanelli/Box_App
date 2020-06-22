@@ -56,28 +56,12 @@ class _HeaderHomeState extends State<HeaderHome> {
                 onPressed: () {},
                 child: Padding(
                   padding: const EdgeInsets.only(left: 16),
-                  child: Container(
-                    width: 200,
-                    color: Colors.transparent,
-                    child: Row(
-                      children: <Widget>[
-                        Text(
-                          "Junho ",
-                          textAlign: TextAlign.left,
-                          style: AppTheme()
-                              .textTheme
-                              .title, //Caso precisar subrescrever o método AppTheme().textTheme.title.copyWith(color: Colors.red, fontSize: 45, fontWeight: FontWeight.w600)
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: 10),
-                        ),
-                        Icon(
-                          FontAwesomeIcons.caretDown,
-                          color: Colors.black,
-                          size: 16,
-                        )
-                      ],
-                    ),
+                  child: Text(
+                    "Dashboard ",
+                    textAlign: TextAlign.left,
+                    style: AppTheme()
+                        .textTheme
+                        .title, //Caso precisar subrescrever o método AppTheme().textTheme.title.copyWith(color: Colors.red, fontSize: 45, fontWeight: FontWeight.w600)
                   ),
                 ),
               ),
@@ -105,16 +89,16 @@ class _HeaderHomeState extends State<HeaderHome> {
                             ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(right: 15),
+                      padding: EdgeInsets.only(right: 16),
                     ),
-                    Icon(
-                      FontAwesomeIcons.ellipsisV,
+                    /*Icon(
+                      FontAwesomeIcons.cartArrowDown,
                       color: Colors.black54,
-                      size: 20,
+                      size: 18,
                     ),
                     Padding(
                       padding: EdgeInsets.only(right: 16),
-                    )
+                    )*/
                   ],
                 ),
               )

@@ -8,11 +8,17 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final AppBar appBar;
   final List<Widget> widgets;
+  final Widget widgetL;
 
   /// you can add more fields that meet your needs
 
   const BaseAppBar(
-      {Key key, this.title, this.appBar, this.widgets, this.backgroundColor})
+      {Key key,
+      this.title,
+      this.appBar,
+      this.widgets,
+      this.backgroundColor,
+      this.widgetL})
       : super(key: key);
 
   @override
@@ -25,6 +31,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       backgroundColor: backgroundColor,
       actions: widgets,
+      leading: widgetL,
       elevation: 0,
     );
   }

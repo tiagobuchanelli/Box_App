@@ -1,3 +1,4 @@
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,7 +9,7 @@ class InfoPaymentMessage extends StatelessWidget {
     return Container(
       //height: 400,
       width: double.infinity,
-      margin: EdgeInsets.only(left: 20, right: 20, bottom: 10, top: 0),
+      margin: EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -35,12 +36,10 @@ class InfoPaymentMessage extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Mensagem",
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: Colors.black87,
-                            //letterSpacing: .0,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600)),
+                    style: AppTheme()
+                        .textTheme
+                        .title
+                        .copyWith(fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
