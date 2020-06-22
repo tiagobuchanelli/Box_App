@@ -3,7 +3,7 @@ import 'package:boxapp/themes/app.theme.dart';
 import 'package:boxapp/utils/appBarBase.dart';
 import 'package:boxapp/utils/treatments/RouteGenerator.dart';
 import 'package:boxapp/views/shopping-cart-checkout.view.dart';
-import 'package:boxapp/widgets/cards/card-orders.dart';
+import 'package:boxapp/widgets/cards/card-shopping-cart.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,11 +15,11 @@ class ShoppingCartView extends StatelessWidget {
       backgroundColor: Colors.grey[100],
       appBar: BaseAppBar(
         backgroundColor: Colors.white,
-        title: "Nova Venda",
+        title: "Venda",
         widgets: <Widget>[
-          Icon(FontAwesomeIcons.userPlus, color: Colors.black54, size: 20),
+          Icon(FontAwesomeIcons.userEdit, color: Colors.black, size: 20),
           Padding(
-            padding: EdgeInsets.only(right: 16),
+            padding: EdgeInsets.only(right: 20),
           ),
         ],
       ),
@@ -35,7 +35,7 @@ class ShoppingCartView extends StatelessWidget {
                 itemCount: listOrders.length,
                 itemBuilder: (context, index) => Padding(
                     padding: EdgeInsets.all(0),
-                    child: CardOrders(index, listOrders)),
+                    child: CardShoppingCart(index, listOrders)),
               ),
             ),
           ),
@@ -74,15 +74,17 @@ class ShoppingCartView extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           "TOTAL",
-                          style: AppTheme().textTheme.title.copyWith(
-                              fontWeight: FontWeight.w600, fontSize: 18),
+                          style: AppTheme()
+                              .textTheme
+                              .display4
+                              .copyWith(fontWeight: FontWeight.w600),
                         ),
                         Text(
                           "R\$4250",
-                          style: AppTheme().textTheme.title.copyWith(
-                              color: Theme.of(context).primaryColor,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18),
+                          style: AppTheme().textTheme.display4.copyWith(
+                                color: Theme.of(context).primaryColor,
+                                fontWeight: FontWeight.w600,
+                              ),
                         ),
                       ],
                     ),
@@ -101,11 +103,11 @@ class ShoppingCartView extends StatelessWidget {
                     ),
                     child: FlatButton(
                       child: Text(
-                        "PRÓXIMO",
-                        style: AppTheme().textTheme.title.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16),
+                        "CHECKOUT",
+                        style: AppTheme().textTheme.display4.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                            ),
                       ),
                       onPressed: () {
                         Navigator.pushNamed(

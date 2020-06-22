@@ -35,9 +35,9 @@ class _HomeViewState extends State<HomeView> {
           children: <Widget>[
             HeaderHome(),
             OptionsSection(),
+            MonthlyBalance(),
             BankAccounts(),
-            ExpensesByCategory(),
-            BoxFlexPoints(),
+            BoxGoals(),
             AccountBalance(),
             LatestOrders(),
           ],

@@ -22,7 +22,7 @@ class _HeaderHomeState extends State<HeaderHome> {
             Container(
               //padding: EdgeInsets.only(top: 0),
               color: Colors.white, //Theme.of(context).primaryColor,
-              height: 253,
+              height: 210,
               /*decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -36,9 +36,9 @@ class _HeaderHomeState extends State<HeaderHome> {
               ),*/
             ),
             Container(
-              height: 42,
+              height: 1,
               decoration: BoxDecoration(
-                color: Colors.grey[100],
+                color: Colors.white,
                 border: Border.all(width: 0, color: Colors.transparent),
               ),
             )
@@ -137,7 +137,7 @@ class _HeaderHomeState extends State<HeaderHome> {
             ),
           ),
         ),
-        Positioned(
+        /*Positioned(
           left: 0.0,
           right: 0.0,
           top: 198.0,
@@ -167,114 +167,113 @@ class _HeaderHomeState extends State<HeaderHome> {
                 children: <Widget>[
                   Expanded(
                     flex: 1,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Icon(
-                          FontAwesomeIcons.donate,
-                          color: Colors.green.withOpacity(0.9),
-                          size: 35,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: 10),
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Receitas",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                      color: Colors.black.withOpacity(0.6),
-                                      //letterSpacing: .0,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500)),
-                            ),
-                            isHideVal
-                                ? Padding(
-                                    padding: const EdgeInsets.only(top: 10.0),
-                                    child: Container(
-                                      padding: EdgeInsets.only(top: 0),
-                                      color: Colors.grey[300],
-                                      height: 10,
-                                      width: 100,
-                                    ),
-                                  )
-                                : Text(
-                                    "R\$425.450,00",
-                                    textAlign: TextAlign.left,
-                                    style: GoogleFonts.poppins(
-                                        textStyle: TextStyle(
-                                            color:
-                                                Colors.green.withOpacity(0.9),
-                                            //letterSpacing: .0,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500)),
-                                  )
-                          ],
-                        ),
-                      ],
+                    child: Container(
+                      color: Colors.red[200],
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Icon(
+                            FontAwesomeIcons.donate,
+                            color: Colors.green.withOpacity(0.9),
+                            size: 35,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(right: 10),
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "Receitas",
+                                textAlign: TextAlign.left,
+                                style: AppTheme().textTheme.display2.copyWith(
+                                    color: Colors.black.withOpacity(0.6)),
+                              ),
+                              isHideVal
+                                  ? Padding(
+                                      padding: const EdgeInsets.only(top: 10.0),
+                                      child: Container(
+                                        padding: EdgeInsets.only(top: 0),
+                                        color: Colors.grey[300],
+                                        height: 10,
+                                        width: 100,
+                                      ),
+                                    )
+                                  : Text(
+                                      "R\$425.450,00",
+                                      textAlign: TextAlign.left,
+                                      style: AppTheme()
+                                          .textTheme
+                                          .display4
+                                          .copyWith(
+                                              color:
+                                                  Colors.green.withOpacity(0.9),
+                                              fontWeight: FontWeight.w500),
+                                    )
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Expanded(
                     flex: 1,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: <Widget>[
-                        Icon(
-                          FontAwesomeIcons.donate,
-                          color: Colors.red.withOpacity(0.9),
-                          size: 35,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: 10),
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Despesas",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                      color: Colors.black.withOpacity(0.6),
-                                      //letterSpacing: .0,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500)),
-                            ),
-                            isHideVal
-                                ? Padding(
-                                    padding: const EdgeInsets.only(top: 10.0),
-                                    child: Container(
-                                      padding: EdgeInsets.only(top: 0),
-                                      color: Colors.grey[300],
-                                      height: 10,
-                                      width: 100,
-                                    ),
-                                  )
-                                : Text(
-                                    "R\$145.450,00",
-                                    textAlign: TextAlign.left,
-                                    style: GoogleFonts.poppins(
-                                        textStyle: TextStyle(
-                                            color: Colors.red.withOpacity(0.9),
-                                            //letterSpacing: .0,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500)),
-                                  )
-                          ],
-                        ),
-                      ],
+                    child: Container(
+                      color: Colors.blue[300],
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Icon(
+                            FontAwesomeIcons.donate,
+                            color: Colors.red.withOpacity(0.9),
+                            size: 35,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(right: 10),
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "Despesas",
+                                textAlign: TextAlign.left,
+                                style: AppTheme().textTheme.display2.copyWith(
+                                    color: Colors.black.withOpacity(0.6)),
+                              ),
+                              isHideVal
+                                  ? Padding(
+                                      padding: const EdgeInsets.only(top: 10.0),
+                                      child: Container(
+                                        padding: EdgeInsets.only(top: 0),
+                                        color: Colors.grey[300],
+                                        height: 10,
+                                        width: 100,
+                                      ),
+                                    )
+                                  : Text(
+                                      "R\$145.450,00",
+                                      textAlign: TextAlign.left,
+                                      style: AppTheme()
+                                          .textTheme
+                                          .display4
+                                          .copyWith(
+                                              color:
+                                                  Colors.red.withOpacity(0.9),
+                                              fontWeight: FontWeight.w500),
+                                    )
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 ],
               ),
             ),
           ),
-        ),
+        ),*/
       ],
     );
   }

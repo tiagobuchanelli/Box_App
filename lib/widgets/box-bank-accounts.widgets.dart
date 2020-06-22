@@ -1,4 +1,5 @@
 import 'package:boxapp/store/database-latest-orders.store.dart';
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:boxapp/widgets/cards/card-bank-account.dart';
 import 'package:boxapp/widgets/cards/card-last-orders.dart';
 import 'package:flutter/material.dart';
@@ -21,13 +22,8 @@ class BankAccounts extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    "Contas Correntes",
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: Colors.black87.withOpacity(0.7),
-                            //letterSpacing: .0,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500)),
+                    "Contas",
+                    style: AppTheme().textTheme.display3,
                   ),
                   Icon(
                     FontAwesomeIcons.ellipsisV,

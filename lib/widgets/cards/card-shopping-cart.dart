@@ -1,12 +1,13 @@
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CardOrders extends StatelessWidget {
+class CardShoppingCart extends StatelessWidget {
   int indexPass;
   List listOrd;
 
-  CardOrders(@required this.indexPass, @required this.listOrd);
+  CardShoppingCart(@required this.indexPass, @required this.listOrd);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class CardOrders extends StatelessWidget {
               ),
               child: FadeInImage.assetNetwork(
                 alignment: Alignment.topCenter, // add this
-                placeholder: 'https://placehold.it/90',
+                placeholder: 'assets/placeholder.png',
                 image: lista[index].image,
                 fit: BoxFit.cover,
                 height: 300,
@@ -66,22 +67,24 @@ class CardOrders extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       lista[index].name,
+                      maxLines: 2,
                       textAlign: TextAlign.left,
-                      style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
-                              color: Colors.black.withOpacity(0.6),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600)),
+                      style: AppTheme()
+                          .textTheme
+                          .display4
+                          .copyWith(fontWeight: FontWeight.w500),
                     ),
                   ),
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text(
                       lista[index].installment,
+                      maxLines: 1,
                       textAlign: TextAlign.left,
-                      style: GoogleFonts.poppins(
-                          textStyle:
-                              TextStyle(color: Colors.black54, fontSize: 14)),
+                      style: AppTheme()
+                          .textTheme
+                          .display2
+                          .copyWith(color: Colors.grey),
                     ),
                   ),
                   SizedBox(
@@ -95,10 +98,10 @@ class CardOrders extends StatelessWidget {
                         Text(
                           lista[index].price,
                           textAlign: TextAlign.left,
-                          style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                  color: Theme.of(context).primaryColor,
-                                  fontSize: 16)),
+                          style: AppTheme()
+                              .textTheme
+                              .display4
+                              .copyWith(color: Theme.of(context).primaryColor),
                         ),
                         Container(
                           height: 28,
@@ -133,7 +136,7 @@ class CardOrders extends StatelessWidget {
                                   "1",
                                   style: GoogleFonts.poppins(
                                       textStyle: TextStyle(
-                                          color: Colors.black54, fontSize: 16)),
+                                          color: Colors.black54, fontSize: 14)),
                                 ),
                               ),
                               Container(

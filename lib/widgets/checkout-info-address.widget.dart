@@ -38,7 +38,7 @@ class InfoAddress extends StatelessWidget {
                     "Endereço",
                     style: AppTheme()
                         .textTheme
-                        .title
+                        .display4
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
                 ],
@@ -67,7 +67,7 @@ class InfoAddress extends StatelessWidget {
                         child: Icon(
                           FontAwesomeIcons.mapMarkerAlt,
                           color: Colors.black87,
-                          size: 16,
+                          size: 14,
                         ),
                       ),
                     ),
@@ -76,12 +76,7 @@ class InfoAddress extends StatelessWidget {
                     ),
                     Text(
                       "Endereço não informado",
-                      style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
-                              color: Colors.black87,
-                              //letterSpacing: .0,
-                              fontSize: 16,
-                              fontWeight: FontWeight.normal)),
+                      style: AppTheme().textTheme.display2,
                     ),
                   ],
                 ),

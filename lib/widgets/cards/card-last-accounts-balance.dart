@@ -1,3 +1,4 @@
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -39,22 +40,16 @@ class CardAccountsBalance extends StatelessWidget {
               //leading: Icon(Icons.people),
               title: Text(
                 lista[index].name,
-                style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
-                        color: Colors.black,
-                        //letterSpacing: .0,
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal)),
+                style: AppTheme()
+                    .textTheme
+                    .display2
+                    .copyWith(fontWeight: FontWeight.w500),
               ),
               subtitle: Text(
-                lista[index].price,
+                "20/06/2020",
                 //textAlign: TextAlign.right,
-                style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
-                        color: Colors.grey,
-                        //letterSpacing: .0,
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal)),
+                style:
+                    AppTheme().textTheme.display2.copyWith(color: Colors.grey),
               ),
               trailing: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -71,14 +66,12 @@ class CardAccountsBalance extends StatelessWidget {
                     padding: EdgeInsets.only(right: 10),
                   ),*/
                   Text(
-                    "20/06/2020",
-                    textAlign: TextAlign.right,
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: Colors.grey[700],
-                            //letterSpacing: .0,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500)),
+                    lista[index].price,
+                    //textAlign: TextAlign.right,
+                    style: AppTheme()
+                        .textTheme
+                        .display2
+                        .copyWith(color: Colors.grey),
                   ),
                 ],
               ),

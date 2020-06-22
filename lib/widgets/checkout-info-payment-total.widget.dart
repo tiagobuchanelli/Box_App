@@ -41,17 +41,16 @@ class InfoTotalPayment extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "TOTAL",
-                    style: AppTheme()
-                        .textTheme
-                        .title
-                        .copyWith(fontWeight: FontWeight.w600, fontSize: 18),
+                    style: AppTheme().textTheme.display4.copyWith(
+                          fontWeight: FontWeight.w600,
+                        ),
                   ),
                   Text(
                     "R\$4250",
-                    style: AppTheme().textTheme.title.copyWith(
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18),
+                    style: AppTheme().textTheme.display4.copyWith(
+                          color: Theme.of(context).primaryColor,
+                          fontWeight: FontWeight.w600,
+                        ),
                   ),
                 ],
               ),
@@ -71,10 +70,10 @@ class InfoTotalPayment extends StatelessWidget {
               child: FlatButton(
                 child: Text(
                   "FINALIZAR",
-                  style: AppTheme().textTheme.title.copyWith(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16),
+                  style: AppTheme().textTheme.display4.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                      ),
                 ),
                 onPressed: () {},
               ),

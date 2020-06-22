@@ -38,7 +38,7 @@ class InfoPaymentMessage extends StatelessWidget {
                     "Mensagem",
                     style: AppTheme()
                         .textTheme
-                        .title
+                        .display4
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
                 ],

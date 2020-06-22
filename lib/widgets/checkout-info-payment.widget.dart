@@ -38,7 +38,7 @@ class InfoPayment extends StatelessWidget {
                     "Forma de Pagamento",
                     style: AppTheme()
                         .textTheme
-                        .title
+                        .display4
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
                   Row(
@@ -47,7 +47,7 @@ class InfoPayment extends StatelessWidget {
                       Icon(
                         FontAwesomeIcons.creditCard,
                         color: Colors.black87,
-                        size: 16,
+                        size: 14,
                       ),
                       Padding(
                         padding: EdgeInsets.only(right: 10),
@@ -55,7 +55,7 @@ class InfoPayment extends StatelessWidget {
                       Icon(
                         FontAwesomeIcons.ccVisa,
                         color: Colors.black87,
-                        size: 16,
+                        size: 14,
                       ),
                       Padding(
                         padding: EdgeInsets.only(right: 10),
@@ -88,7 +88,7 @@ class InfoPayment extends StatelessWidget {
                         child: Icon(
                           FontAwesomeIcons.creditCard,
                           color: Colors.black87,
-                          size: 16,
+                          size: 14,
                         ),
                       ),
                     ),
@@ -97,12 +97,7 @@ class InfoPayment extends StatelessWidget {
                     ),
                     Text(
                       "Dinheiro",
-                      style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
-                              color: Colors.black87,
-                              //letterSpacing: .0,
-                              fontSize: 16,
-                              fontWeight: FontWeight.normal)),
+                      style: AppTheme().textTheme.display2,
                     ),
                   ],
                 ),

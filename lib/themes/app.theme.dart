@@ -29,8 +29,16 @@ ThemeData AppTheme() {
           fontSize: 14,
           fontWeight: FontWeight.normal,
           fontFamily: "Poppins"),
-      //display3: new TextStyle(color: Colors.red),
-      //display4: new TextStyle(fontSize: 78),
+      display3: new TextStyle(
+          color: Colors.black87.withOpacity(0.8),
+          fontSize: 20,
+          fontFamily: "Poppins",
+          fontWeight: FontWeight.w500),
+      display4: new TextStyle(
+          color: Colors.black.withOpacity(0.8),
+          fontSize: 16,
+          fontWeight: FontWeight.normal,
+          fontFamily: "Poppins"),
       //button: new TextStyle(color: Colors.green),
       //headline: new TextStyle(color: Colors.deepPurple)
     ),

@@ -1,3 +1,4 @@
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,14 +41,10 @@ class CardGoals extends StatelessWidget {
                 child: Text(
                   listGoals[indexPass].goal,
                   textAlign: TextAlign.left,
-                  style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                          color: listGoals[indexPass].style == 'dark'
-                              ? Colors.white
-                              : Colors.grey[700],
-                          //letterSpacing: .0,
-                          fontSize: 18,
-                          fontWeight: FontWeight.normal)),
+                  style: AppTheme().textTheme.display3.copyWith(
+                      color: listGoals[indexPass].style == 'dark'
+                          ? Colors.white
+                          : Colors.grey[700]),
                 ),
               ),
             ),
@@ -124,15 +121,10 @@ class CardGoals extends StatelessWidget {
                             child: Text(
                               "R\$",
                               textAlign: TextAlign.left,
-                              style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                      color:
-                                          listGoals[indexPass].style == 'dark'
-                                              ? Colors.white
-                                              : Colors.grey[700],
-                                      //letterSpacing: .0,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500)),
+                              style: AppTheme().textTheme.display2.copyWith(
+                                  color: listGoals[indexPass].style == 'dark'
+                                      ? Colors.white
+                                      : Colors.grey[700]),
                             ),
                           ),
                         ),
@@ -163,14 +155,10 @@ class CardGoals extends StatelessWidget {
                   child: Text(
                     "Objetivo",
                     textAlign: TextAlign.left,
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: listGoals[indexPass].style == 'dark'
-                                ? Colors.white
-                                : Colors.grey[700],
-                            //letterSpacing: .0,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500)),
+                    style: AppTheme().textTheme.display2.copyWith(
+                        color: listGoals[indexPass].style == 'dark'
+                            ? Colors.white
+                            : Colors.grey[700]),
                   ),
                 ),
                 Padding(
@@ -178,14 +166,10 @@ class CardGoals extends StatelessWidget {
                   child: Text(
                     listGoals[indexPass].valGoal,
                     textAlign: TextAlign.left,
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: listGoals[indexPass].style == 'dark'
-                                ? Colors.white
-                                : Colors.grey[700],
-                            //letterSpacing: .0,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500)),
+                    style: AppTheme().textTheme.display2.copyWith(
+                        color: listGoals[indexPass].style == 'dark'
+                            ? Colors.white
+                            : Colors.grey[700]),
                   ),
                 ),
               ],

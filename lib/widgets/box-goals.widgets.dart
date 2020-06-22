@@ -1,11 +1,12 @@
 import 'package:boxapp/store/database-latest-orders.store.dart';
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:boxapp/widgets/cards/card-goals.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class BoxFlexPoints extends StatelessWidget {
+class BoxGoals extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,12 +23,7 @@ class BoxFlexPoints extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Objetivos",
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: Colors.black87.withOpacity(0.7),
-                            //letterSpacing: .0,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500)),
+                    style: AppTheme().textTheme.display3,
                   ),
                   Icon(
                     FontAwesomeIcons.ellipsisV,

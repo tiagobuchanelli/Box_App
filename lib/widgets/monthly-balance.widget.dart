@@ -1,4 +1,5 @@
 import 'package:boxapp/store/database-latest-orders.store.dart';
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:boxapp/widgets/cards/card-last-accounts-balance.dart';
 import 'package:boxapp/widgets/cards/card-last-orders.dart';
 import 'package:flutter/material.dart';
@@ -9,12 +10,12 @@ import 'dart:async';
 import 'dart:math';
 import 'package:fl_chart/fl_chart.dart';
 
-class ExpensesByCategory extends StatefulWidget {
+class MonthlyBalance extends StatefulWidget {
   @override
-  _ExpensesByCategoryState createState() => _ExpensesByCategoryState();
+  _MonthlyBalanceState createState() => _MonthlyBalanceState();
 }
 
-class _ExpensesByCategoryState extends State<ExpensesByCategory> {
+class _MonthlyBalanceState extends State<MonthlyBalance> {
   //final Color barBackgroundColor = Colors.white;
 
   int touchedIndex;
@@ -22,7 +23,7 @@ class _ExpensesByCategoryState extends State<ExpensesByCategory> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 30),
+      margin: EdgeInsets.only(left: 10, right: 10, bottom: 0, top: 30),
       child: Column(
         children: <Widget>[
           Container(
@@ -35,12 +36,7 @@ class _ExpensesByCategoryState extends State<ExpensesByCategory> {
                 children: <Widget>[
                   Text(
                     "Balanço",
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: Colors.black87.withOpacity(0.7),
-                            //letterSpacing: .0,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600)),
+                    style: AppTheme().textTheme.display3,
                   ),
                   Icon(
                     FontAwesomeIcons.ellipsisV,
@@ -74,7 +70,7 @@ class _ExpensesByCategoryState extends State<ExpensesByCategory> {
                   Container(
                     //height: 150,
                     //color: Colors.red,
-                    width: 270,
+                    width: 280,
 
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -82,7 +78,7 @@ class _ExpensesByCategoryState extends State<ExpensesByCategory> {
                       children: <Widget>[
                         Container(
                           padding: EdgeInsets.only(
-                              left: 16, top: 16, bottom: 10, right: 5),
+                              left: 16, top: 20, bottom: 10, right: 5),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
@@ -107,13 +103,13 @@ class _ExpensesByCategoryState extends State<ExpensesByCategory> {
                                           alignment: Alignment.centerLeft,
                                           child: Text(
                                             "Receitas",
-                                            style: GoogleFonts.poppins(
-                                                textStyle: TextStyle(
+                                            style: AppTheme()
+                                                .textTheme
+                                                .display2
+                                                .copyWith(
                                                     color: Colors.green,
-                                                    //letterSpacing: .0,
-                                                    fontSize: 16,
                                                     fontWeight:
-                                                        FontWeight.w500)),
+                                                        FontWeight.w500),
                                           ),
                                         ),
                                       )
@@ -126,12 +122,12 @@ class _ExpensesByCategoryState extends State<ExpensesByCategory> {
                                       alignment: Alignment.centerLeft,
                                       child: Text(
                                         "R\$251.500,65",
-                                        style: GoogleFonts.poppins(
-                                            textStyle: TextStyle(
+                                        style: AppTheme()
+                                            .textTheme
+                                            .display2
+                                            .copyWith(
                                                 color: Colors.green,
-                                                //letterSpacing: .0,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500)),
+                                                fontWeight: FontWeight.normal),
                                       ),
                                     ),
                                   )
@@ -161,13 +157,13 @@ class _ExpensesByCategoryState extends State<ExpensesByCategory> {
                                           alignment: Alignment.centerLeft,
                                           child: Text(
                                             "Despesas",
-                                            style: GoogleFonts.poppins(
-                                                textStyle: TextStyle(
+                                            style: AppTheme()
+                                                .textTheme
+                                                .display2
+                                                .copyWith(
                                                     color: Colors.red,
-                                                    //letterSpacing: .0,
-                                                    fontSize: 16,
                                                     fontWeight:
-                                                        FontWeight.w500)),
+                                                        FontWeight.w500),
                                           ),
                                         ),
                                       )
@@ -180,12 +176,10 @@ class _ExpensesByCategoryState extends State<ExpensesByCategory> {
                                       alignment: Alignment.centerLeft,
                                       child: Text(
                                         "R\$20.500,65",
-                                        style: GoogleFonts.poppins(
-                                            textStyle: TextStyle(
-                                                color: Colors.red,
-                                                //letterSpacing: .0,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500)),
+                                        style: AppTheme()
+                                            .textTheme
+                                            .display2
+                                            .copyWith(color: Colors.red),
                                       ),
                                     ),
                                   )
@@ -196,7 +190,7 @@ class _ExpensesByCategoryState extends State<ExpensesByCategory> {
                               ),
                               Divider(
                                 height: 0.5,
-                                color: Colors.grey[400],
+                                color: Colors.grey[300],
                               ),
                               SizedBox(
                                 height: 16,
@@ -214,13 +208,13 @@ class _ExpensesByCategoryState extends State<ExpensesByCategory> {
                                           alignment: Alignment.centerLeft,
                                           child: Text(
                                             "Balanço",
-                                            style: GoogleFonts.poppins(
-                                                textStyle: TextStyle(
+                                            style: AppTheme()
+                                                .textTheme
+                                                .display2
+                                                .copyWith(
                                                     color: Colors.grey[600],
-                                                    //letterSpacing: .0,
-                                                    fontSize: 16,
                                                     fontWeight:
-                                                        FontWeight.w500)),
+                                                        FontWeight.w500),
                                           ),
                                         ),
                                       )
@@ -233,12 +227,10 @@ class _ExpensesByCategoryState extends State<ExpensesByCategory> {
                                       alignment: Alignment.centerLeft,
                                       child: Text(
                                         "R\$20.500,65",
-                                        style: GoogleFonts.poppins(
-                                            textStyle: TextStyle(
-                                                color: Colors.grey[600],
-                                                //letterSpacing: .0,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w500)),
+                                        style: AppTheme()
+                                            .textTheme
+                                            .display2
+                                            .copyWith(color: Colors.grey[600]),
                                       ),
                                     ),
                                   )

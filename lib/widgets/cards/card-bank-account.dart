@@ -1,3 +1,4 @@
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -50,26 +51,20 @@ class CardBankAccount extends StatelessWidget {
               //leading: Icon(Icons.people),
               title: Text(
                 lista[index].name,
-                style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
-                        color: Colors.black,
-                        //letterSpacing: .0,
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal)),
+                style: AppTheme()
+                    .textTheme
+                    .display2
+                    .copyWith(fontWeight: FontWeight.w500),
               ),
               subtitle: Text(
                 lista[index].price,
-                style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
-                        color: Colors.grey,
-                        //letterSpacing: .0,
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal)),
+                style:
+                    AppTheme().textTheme.display2.copyWith(color: Colors.grey),
               ),
               trailing: Icon(
                 FontAwesomeIcons.plus,
                 color: Theme.of(context).primaryColor,
-                size: 16,
+                size: 14,
               ),
               //subtitle: Text(lista[index].date),
             ),

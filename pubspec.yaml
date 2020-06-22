@@ -79,6 +79,7 @@ flutter:
     - assets/hcat.png
     - assets/icat.png
     - assets/insurance.png
+    - assets/placeholder.png
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg

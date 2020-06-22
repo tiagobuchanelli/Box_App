@@ -67,6 +67,7 @@ class OptionsSection extends StatelessWidget {
         children: <Widget>[
           GestureDetector(
               child: Container(
+                //height: 150,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -106,14 +107,9 @@ class OptionsSection extends StatelessWidget {
                             alignment: Alignment.centerLeft,
                             child: Text(
                               title,
-                              style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                      color: colorBack != "0xffFFFFFF"
-                                          ? Colors.white
-                                          : Theme.of(context).primaryColor,
-                                      //letterSpacing: .0,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500)),
+                              style: AppTheme().textTheme.display2.copyWith(
+                                  color: Theme.of(context).primaryColor,
+                                  fontWeight: FontWeight.normal),
                               //textAlign: TextAlign.left,
                             ),
                           ),

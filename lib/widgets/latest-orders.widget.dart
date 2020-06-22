@@ -1,4 +1,5 @@
 import 'package:boxapp/store/database-latest-orders.store.dart';
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:boxapp/widgets/cards/card-last-accounts-balance.dart';
 import 'package:boxapp/widgets/cards/card-last-orders.dart';
 import 'package:flutter/material.dart';
@@ -22,12 +23,7 @@ class LatestOrders extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Últimas Vendas",
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: Colors.black87.withOpacity(0.7),
-                            //letterSpacing: .0,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600)),
+                    style: AppTheme().textTheme.display3,
                   ),
                   Icon(
                     FontAwesomeIcons.ellipsisV,
