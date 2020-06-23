@@ -1,3 +1,5 @@
+import 'package:boxapp/themes/app.theme.dart';
+import 'package:boxapp/utils/slide-menu.utils.dart';
 import 'package:boxapp/utils/spinner.utils.dart';
 import 'package:boxapp/utils/treatments/RouteGenerator.dart';
 import 'package:boxapp/widgets/account-balance.widget.dart';
@@ -34,12 +36,50 @@ class _HomeViewState extends State<HomeView> {
         child: Column(
           children: <Widget>[
             HeaderHome(),
-            OptionsSection(),
-            MonthlyBalance(),
+            //OptionsSection(),
+            SlideMenu(
+              child: Container(
+                color: Theme.of(context).primaryColor,
+                child: new ListTile(
+                  title: new Container(
+                      child: Row(
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(left: 0, right: 10),
+                        child: Icon(
+                          FontAwesomeIcons.solidFlag,
+                          color: Colors.white,
+                          size: 14,
+                        ),
+                      ),
+                      new Text(
+                        "Você tem alertas importantes!!",
+                        style: AppTheme()
+                            .textTheme
+                            .display2
+                            .copyWith(color: Colors.white),
+                      ),
+                    ],
+                  )),
+                ),
+              ),
+              menuItems: <Widget>[
+                new Icon(
+                  FontAwesomeIcons.trash,
+                  color: Colors.white,
+                  size: 14,
+                ),
+              ],
+              colorBckOption: Colors.red,
+            ),
             BankAccounts(),
-            BoxGoals(),
+            MonthlyBalance(),
             AccountBalance(),
             LatestOrders(),
+            BoxGoals(),
+            SizedBox(
+              height: 50,
+            )
           ],
         ),
       ),

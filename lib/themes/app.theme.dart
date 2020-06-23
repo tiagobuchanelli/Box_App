@@ -16,7 +16,11 @@ ThemeData AppTheme() {
           fontFamily: "Poppins",
           fontWeight: FontWeight.w400),
       //subtitle: new TextStyle(color: Colors.red),
-      //subhead: new TextStyle(color: Colors.red),
+      subhead: new TextStyle(
+          color: Colors.black.withOpacity(0.8),
+          fontSize: 12,
+          fontWeight: FontWeight.normal,
+          fontFamily: "Poppins"),
       //body1: new TextStyle(color: Colors.red),
       //body2: new TextStyle(color: Colors.red),
       display1: new TextStyle(

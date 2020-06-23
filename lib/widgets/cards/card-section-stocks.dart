@@ -1,4 +1,5 @@
 import 'package:boxapp/models/item-categ.model.dart';
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:boxapp/views/product-detail.view.dart';
 import 'package:flutter/material.dart';
 import 'package:getflutter/components/button/gf_button.dart';
@@ -65,7 +66,7 @@ class CardSection extends StatelessWidget {
                   ),
                   child: FadeInImage.assetNetwork(
                     alignment: Alignment.topCenter, // add this
-                    placeholder: 'https://placehold.it/90',
+                    placeholder: 'assets/placeholder.png',
                     image: listData[index].image,
                     fit: BoxFit.cover,
                     height: 300,
@@ -81,12 +82,10 @@ class CardSection extends StatelessWidget {
                     listData[index].name,
                     maxLines: 2,
                     textAlign: TextAlign.left,
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                            color: Colors.black87,
-                            //letterSpacing: .0,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600)),
+                    style: AppTheme()
+                        .textTheme
+                        .display2
+                        .copyWith(fontWeight: FontWeight.w500),
                   ),
                 ),
                 Padding(
@@ -96,12 +95,8 @@ class CardSection extends StatelessWidget {
                   listData[index].unidade,
                   maxLines: 1,
                   textAlign: TextAlign.left,
-                  style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                          color: Colors.black87,
-                          //letterSpacing: .0,
-                          fontSize: 12,
-                          fontWeight: FontWeight.normal)),
+                  style:
+                      AppTheme().textTheme.subhead.copyWith(color: Colors.grey),
                 ),
                 Padding(
                   padding: EdgeInsets.only(bottom: 8),
@@ -112,27 +107,21 @@ class CardSection extends StatelessWidget {
                       listData[index].preco,
                       maxLines: 1,
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
-                              color: Colors.black87,
-                              //letterSpacing: .0,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600)),
+                      style: AppTheme()
+                          .textTheme
+                          .display2
+                          .copyWith(fontWeight: FontWeight.w500),
                     ),
                     Padding(
                       padding: EdgeInsets.only(right: 5),
                     ),
-                    Text(
-                      listData[index].precoDe,
-                      maxLines: 1,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          decoration: TextDecoration.lineThrough,
-                          color: Colors.black54,
-                          //letterSpacing: .0,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600),
-                    )
+                    Text(listData[index].precoDe,
+                        maxLines: 1,
+                        textAlign: TextAlign.center,
+                        style: AppTheme().textTheme.display2.copyWith(
+                            fontWeight: FontWeight.w500,
+                            decoration: TextDecoration.lineThrough,
+                            color: Colors.grey))
                   ],
                 ),
                 Padding(
@@ -163,12 +152,10 @@ class CardSection extends StatelessWidget {
                           padding: EdgeInsets.only(right: 10),
                         ),
                         Text("Adicionar",
-                            style: GoogleFonts.poppins(
-                                textStyle: TextStyle(
-                                    color: Colors.white,
-                                    //letterSpacing: .0,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w500))),
+                            style: AppTheme()
+                                .textTheme
+                                .subhead
+                                .copyWith(color: Colors.white)),
                       ],
                     ),
                     onPressed: () {

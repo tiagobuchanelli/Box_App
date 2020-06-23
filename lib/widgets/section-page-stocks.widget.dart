@@ -1,4 +1,5 @@
 import 'package:boxapp/models/item-categ.model.dart';
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,22 +25,12 @@ class SectionPageStocks extends StatelessWidget {
               children: <Widget>[
                 Text(
                   titleSection,
-                  style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                          color: Colors.black87.withOpacity(0.7),
-                          //letterSpacing: .0,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600)),
+                  style: AppTheme().textTheme.display3,
                 ),
                 Text(
                   "Ver Todos",
                   textAlign: TextAlign.end,
-                  style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                          color: Colors.black87,
-                          //letterSpacing: .0,
-                          fontSize: 12,
-                          fontWeight: FontWeight.normal)),
+                  style: AppTheme().textTheme.subhead,
                 ),
               ],
             ),

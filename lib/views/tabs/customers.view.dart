@@ -12,39 +12,21 @@ class CustomersView extends StatelessWidget {
         appBar: BaseAppBar(
           backgroundColor: Colors.white,
           title: "Clientes",
+          widgets: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(right: 16),
+              child: Icon(
+                FontAwesomeIcons.search,
+                color: Colors.black54,
+                size: 20,
+              ),
+            )
+          ],
         ),
         body: SingleChildScrollView(
           child: Column(
             //mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.only(left: 20, top: 10, bottom: 10),
-                color: Colors.grey[200],
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text(
-                      "Recentes",
-                      style: GoogleFonts.poppins(
-                          textStyle:
-                              TextStyle(color: Colors.black54, fontSize: 18)),
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Padding(
-                        padding: EdgeInsets.only(right: 20),
-                        child: Text(
-                          "Filtrar",
-                          style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                  color: Colors.black54, fontSize: 18)),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
               SizedBox(
                 height: 15,
               ),

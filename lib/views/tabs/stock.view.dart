@@ -46,12 +46,11 @@ class _StockViewState extends State<StockView> {
             children: <Widget>[
               Container(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  border: Border.all(
-                      width: 0, color: Theme.of(context).primaryColor),
+                  color: Colors.white,
+                  border: Border.all(width: 0, color: Colors.white),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
+                  padding: EdgeInsets.fromLTRB(10, 50, 10, 10),
                   child: Container(
                     height: 45,
                     child: TextField(
@@ -92,7 +91,7 @@ class _StockViewState extends State<StockView> {
               ),
               Container(
                 margin: EdgeInsets.only(top: 10, bottom: 10),
-                height: 120,
+                height: 100,
                 child: CategoryList(),
               ),
               SizedBox(
