@@ -1,7 +1,6 @@
 import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HeaderHome extends StatefulWidget {
   @override
@@ -21,8 +20,9 @@ class _HeaderHomeState extends State<HeaderHome> {
           children: <Widget>[
             Container(
               //padding: EdgeInsets.only(top: 0),
-              color: Colors.white, //Theme.of(context).primaryColor,
-              height: 210,
+              color: Colors
+                  .white, //AppTheme().primaryColor, //, //Theme.of(context).primaryColor,
+              height: 170,
               /*decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -44,7 +44,7 @@ class _HeaderHomeState extends State<HeaderHome> {
             )
           ],
         ),
-        Positioned(
+        /*Positioned(
           top: 35,
           left: 0,
           right: 0,
@@ -67,7 +67,7 @@ class _HeaderHomeState extends State<HeaderHome> {
               ),
               Container(
                 color: Colors.transparent,
-                height: 40,
+                height: 65,
                 child: Row(
                   children: <Widget>[
                     GestureDetector(
@@ -104,35 +104,83 @@ class _HeaderHomeState extends State<HeaderHome> {
               )
             ],
           ),
-        ),
+        ),*/
         Positioned(
           left: 16,
           right: 16,
-          top: 110,
+          top: 35,
           child: Container(
-            height: 100,
+            height: 120,
             //color: Colors.red,
             alignment: Alignment.center,
             child: Column(
               children: <Widget>[
-                isHideVal
-                    ? Padding(
-                        padding: const EdgeInsets.only(top: 0, bottom: 10),
-                        child: Container(
-                          padding: EdgeInsets.only(top: 0),
-                          color: Colors.grey[300],
-                          height: 15,
-                          width: 150,
-                        ),
-                      )
-                    : Text(
-                        "R\$ 280.000,00 ",
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          isHideVal = !isHideVal;
+                        });
+                      },
+                      child: isHideVal
+                          ? Icon(
+                              FontAwesomeIcons.eyeSlash,
+                              color: Colors.black54,
+                              size: 20,
+                            )
+                          : Icon(
+                              FontAwesomeIcons.eye,
+                              color: Colors.black54,
+                              size: 20,
+                            ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 0),
+                    ),
+                    /*Icon(
+                      FontAwesomeIcons.cartArrowDown,
+                      color: Colors.black54,
+                      size: 18,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 16),
+                    )*/
+                  ],
+                ),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 10),
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    isHideVal
+                        ? Padding(
+                            padding: const EdgeInsets.only(top: 10, bottom: 10),
+                            child: Container(
+                              padding: EdgeInsets.only(top: 0),
+                              color: Colors.grey[300],
+                              height: 15,
+                              width: 150,
+                            ),
+                          )
+                        : Text(
+                            "R\$ 280.000,00 ",
+                            textAlign: TextAlign.center,
+                            style: AppTheme()
+                                .textTheme
+                                .headline4
+                                .copyWith(fontWeight: FontWeight.w400),
+                          ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 5),
+                    ),
+                    Text("Saldo Atual",
                         textAlign: TextAlign.center,
-                        style: AppTheme().textTheme.display1,
-                      ),
-                Text("Saldo Atual",
-                    textAlign: TextAlign.center,
-                    style: AppTheme().textTheme.display2),
+                        style: AppTheme().textTheme.headline3),
+                  ],
+                ),
               ],
             ),
           ),

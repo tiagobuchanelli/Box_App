@@ -10,35 +10,35 @@ ThemeData AppTheme() {
     // primarySwatch: primaryColor,
     brightness: brightness,
     textTheme: new TextTheme(
-      title: new TextStyle(
+      headline6: new TextStyle(
           color: Colors.black,
           fontSize: 20,
           fontFamily: "Poppins",
           fontWeight: FontWeight.w400),
       //subtitle: new TextStyle(color: Colors.red),
-      subhead: new TextStyle(
+      subtitle1: new TextStyle(
           color: Colors.black.withOpacity(0.8),
           fontSize: 12,
           fontWeight: FontWeight.normal,
           fontFamily: "Poppins"),
       //body1: new TextStyle(color: Colors.red),
       //body2: new TextStyle(color: Colors.red),
-      display1: new TextStyle(
+      headline4: new TextStyle(
           color: Colors.black.withOpacity(0.8),
           fontSize: 30,
           fontWeight: FontWeight.w300,
           fontFamily: "Poppins"),
-      display2: new TextStyle(
+      headline3: new TextStyle(
           color: Colors.black.withOpacity(0.8),
           fontSize: 14,
           fontWeight: FontWeight.normal,
           fontFamily: "Poppins"),
-      display3: new TextStyle(
+      headline2: new TextStyle(
           color: Colors.black87.withOpacity(0.8),
           fontSize: 20,
           fontFamily: "Poppins",
           fontWeight: FontWeight.w500),
-      display4: new TextStyle(
+      headline1: new TextStyle(
           color: Colors.black.withOpacity(0.8),
           fontSize: 16,
           fontWeight: FontWeight.normal,

@@ -1,16 +1,14 @@
 import 'package:boxapp/themes/app.theme.dart';
+import 'package:boxapp/utils/appBarBase.dart';
 import 'package:boxapp/utils/slide-menu.utils.dart';
-import 'package:boxapp/utils/spinner.utils.dart';
 import 'package:boxapp/utils/treatments/RouteGenerator.dart';
 import 'package:boxapp/widgets/account-balance.widget.dart';
-import 'package:boxapp/widgets/box-goals.widgets.dart';
 import 'package:boxapp/widgets/box-bank-accounts.widgets.dart';
-import 'package:boxapp/widgets/monthly-balance.widget.dart';
+import 'package:boxapp/widgets/box-goals.widgets.dart';
 import 'package:boxapp/widgets/header-home.widgets.dart';
 import 'package:boxapp/widgets/latest-orders.widget.dart';
-import 'package:boxapp/widgets/section-options.dart';
+import 'package:boxapp/widgets/monthly-balance.widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,6 +20,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   TextEditingController _searchController = new TextEditingController();
+  bool showAlert = false;
 
   @override
   void initState() {
@@ -31,47 +30,66 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Colors.white,
+      appBar: BaseAppBar(
+        backgroundColor: Colors.white,
+        title: "Dashboard",
+        widgets: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(right: 16),
+            child: Icon(
+              FontAwesomeIcons.search,
+              color: Colors.black54,
+              size: 20,
+            ),
+          )
+        ],
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             HeaderHome(),
             //OptionsSection(),
-            SlideMenu(
-              child: Container(
-                color: Theme.of(context).primaryColor,
-                child: new ListTile(
-                  title: new Container(
-                      child: Row(
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(left: 0, right: 10),
-                        child: Icon(
-                          FontAwesomeIcons.solidFlag,
+            showAlert
+                ? Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: SlideMenu(
+                      child: Container(
+                        color: Theme.of(context).primaryColor,
+                        child: new ListTile(
+                          title: new Container(
+                              child: Row(
+                            children: <Widget>[
+                              Padding(
+                                padding: EdgeInsets.only(left: 0, right: 10),
+                                child: Icon(
+                                  FontAwesomeIcons.solidFlag,
+                                  color: Colors.white,
+                                  size: 14,
+                                ),
+                              ),
+                              new Text(
+                                "Você tem alertas importantes!!",
+                                style: AppTheme()
+                                    .textTheme
+                                    .display2
+                                    .copyWith(color: Colors.white),
+                              ),
+                            ],
+                          )),
+                        ),
+                      ),
+                      menuItems: <Widget>[
+                        new Icon(
+                          FontAwesomeIcons.trash,
                           color: Colors.white,
                           size: 14,
                         ),
-                      ),
-                      new Text(
-                        "Você tem alertas importantes!!",
-                        style: AppTheme()
-                            .textTheme
-                            .display2
-                            .copyWith(color: Colors.white),
-                      ),
-                    ],
-                  )),
-                ),
-              ),
-              menuItems: <Widget>[
-                new Icon(
-                  FontAwesomeIcons.trash,
-                  color: Colors.white,
-                  size: 14,
-                ),
-              ],
-              colorBckOption: Colors.red,
-            ),
+                      ],
+                      colorBckOption: Colors.red,
+                    ),
+                  )
+                : Container(),
             BankAccounts(),
             MonthlyBalance(),
             AccountBalance(),

@@ -41,7 +41,7 @@ class CardGoals extends StatelessWidget {
                 child: Text(
                   listGoals[indexPass].goal,
                   textAlign: TextAlign.left,
-                  style: AppTheme().textTheme.display3.copyWith(
+                  style: AppTheme().textTheme.headline2.copyWith(
                       color: listGoals[indexPass].style == 'dark'
                           ? Colors.white
                           : Colors.grey[700]),
@@ -121,7 +121,7 @@ class CardGoals extends StatelessWidget {
                             child: Text(
                               "R\$",
                               textAlign: TextAlign.left,
-                              style: AppTheme().textTheme.display2.copyWith(
+                              style: AppTheme().textTheme.headline3.copyWith(
                                   color: listGoals[indexPass].style == 'dark'
                                       ? Colors.white
                                       : Colors.grey[700]),

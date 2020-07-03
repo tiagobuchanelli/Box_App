@@ -1,7 +1,6 @@
 import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CardBankAccount extends StatelessWidget {
   int indexPass;
@@ -53,13 +52,13 @@ class CardBankAccount extends StatelessWidget {
                 lista[index].name,
                 style: AppTheme()
                     .textTheme
-                    .display2
+                    .headline3
                     .copyWith(fontWeight: FontWeight.w500),
               ),
               subtitle: Text(
                 lista[index].price,
                 style:
-                    AppTheme().textTheme.display2.copyWith(color: Colors.grey),
+                    AppTheme().textTheme.headline3.copyWith(color: Colors.grey),
               ),
               trailing: Icon(
                 FontAwesomeIcons.plus,

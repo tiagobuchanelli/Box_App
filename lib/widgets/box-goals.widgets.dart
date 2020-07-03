@@ -4,7 +4,6 @@ import 'package:boxapp/widgets/cards/card-goals.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class BoxGoals extends StatelessWidget {
   @override
@@ -14,7 +13,7 @@ class BoxGoals extends StatelessWidget {
         children: <Widget>[
           Container(
             margin: EdgeInsets.only(left: 10, right: 10, bottom: 0, top: 30),
-            color: Colors.grey[100],
+            color: Colors.white,
             child: Padding(
               padding:
                   const EdgeInsets.only(left: 5, right: 0, top: 0, bottom: 15),
@@ -23,7 +22,10 @@ class BoxGoals extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Objetivos",
-                    style: AppTheme().textTheme.display3,
+                    style: AppTheme()
+                        .textTheme
+                        .headline2
+                        .copyWith(fontWeight: FontWeight.w400),
                   ),
                   Icon(
                     FontAwesomeIcons.ellipsisV,

@@ -1,7 +1,6 @@
 import 'package:boxapp/models/item-categ.model.dart';
 import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'cards/card-section-stocks.dart';
 
@@ -25,12 +24,15 @@ class SectionPageStocks extends StatelessWidget {
               children: <Widget>[
                 Text(
                   titleSection,
-                  style: AppTheme().textTheme.display3,
+                  style: AppTheme()
+                      .textTheme
+                      .headline2
+                      .copyWith(fontWeight: FontWeight.w400),
                 ),
                 Text(
                   "Ver Todos",
                   textAlign: TextAlign.end,
-                  style: AppTheme().textTheme.subhead,
+                  style: AppTheme().textTheme.subtitle1,
                 ),
               ],
             ),

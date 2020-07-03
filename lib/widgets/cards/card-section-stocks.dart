@@ -2,10 +2,6 @@ import 'package:boxapp/models/item-categ.model.dart';
 import 'package:boxapp/themes/app.theme.dart';
 import 'package:boxapp/views/product-detail.view.dart';
 import 'package:flutter/material.dart';
-import 'package:getflutter/components/button/gf_button.dart';
-import 'package:getflutter/shape/gf_button_shape.dart';
-import 'package:getflutter/types/gf_button_type.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CardSection extends StatelessWidget {
   final int index;
@@ -84,7 +80,7 @@ class CardSection extends StatelessWidget {
                     textAlign: TextAlign.left,
                     style: AppTheme()
                         .textTheme
-                        .display2
+                        .headline3
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
                 ),
@@ -95,8 +91,10 @@ class CardSection extends StatelessWidget {
                   listData[index].unidade,
                   maxLines: 1,
                   textAlign: TextAlign.left,
-                  style:
-                      AppTheme().textTheme.subhead.copyWith(color: Colors.grey),
+                  style: AppTheme()
+                      .textTheme
+                      .subtitle1
+                      .copyWith(color: Colors.grey),
                 ),
                 Padding(
                   padding: EdgeInsets.only(bottom: 8),
@@ -109,7 +107,7 @@ class CardSection extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: AppTheme()
                           .textTheme
-                          .display2
+                          .headline3
                           .copyWith(fontWeight: FontWeight.w500),
                     ),
                     Padding(
@@ -118,7 +116,7 @@ class CardSection extends StatelessWidget {
                     Text(listData[index].precoDe,
                         maxLines: 1,
                         textAlign: TextAlign.center,
-                        style: AppTheme().textTheme.display2.copyWith(
+                        style: AppTheme().textTheme.headline3.copyWith(
                             fontWeight: FontWeight.w500,
                             decoration: TextDecoration.lineThrough,
                             color: Colors.grey))
@@ -154,7 +152,7 @@ class CardSection extends StatelessWidget {
                         Text("Adicionar",
                             style: AppTheme()
                                 .textTheme
-                                .subhead
+                                .subtitle1
                                 .copyWith(color: Colors.white)),
                       ],
                     ),

@@ -1,20 +1,18 @@
 import 'package:boxapp/store/database-latest-orders.store.dart';
 import 'package:boxapp/themes/app.theme.dart';
 import 'package:boxapp/widgets/cards/card-bank-account.dart';
-import 'package:boxapp/widgets/cards/card-last-orders.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class BankAccounts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 10, right: 10, bottom: 0, top: 30),
+      margin: EdgeInsets.only(left: 10, right: 10, bottom: 0, top: 0),
       child: Column(
         children: <Widget>[
           Container(
-            color: Colors.grey[100],
+            color: Colors.white,
             child: Padding(
               padding:
                   const EdgeInsets.only(left: 5, right: 0, top: 0, bottom: 15),
@@ -22,8 +20,11 @@ class BankAccounts extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    "Contas",
-                    style: AppTheme().textTheme.display3,
+                    "Saldo em Contas",
+                    style: AppTheme()
+                        .textTheme
+                        .headline2
+                        .copyWith(fontWeight: FontWeight.w400),
                   ),
                   Icon(
                     FontAwesomeIcons.ellipsisV,
@@ -48,7 +49,7 @@ class BankAccounts extends StatelessWidget {
                     color: Colors.grey[300].withOpacity(0.8),
                     spreadRadius: 1,
                     blurRadius: 1,
-                    offset: Offset(0, 2), // changes position of shadow
+                    offset: Offset(1, 1), // changes position of shadow
                   ),
                 ],
               ),

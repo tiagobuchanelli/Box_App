@@ -1,6 +1,5 @@
 import 'package:boxapp/themes/app.theme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   //final double height;
@@ -27,7 +26,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         title,
         textAlign: TextAlign.left,
-        style: AppTheme().textTheme.title,
+        style: AppTheme().textTheme.headline6,
       ),
       backgroundColor: backgroundColor,
       actions: widgets,
