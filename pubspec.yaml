@@ -33,6 +33,7 @@ dependencies:
   fl_chart: ^0.9.4
   flutter_circular_chart: ^0.1.0
   flutter_speed_dial: ^1.2.5
+  ff_navigation_bar: ^0.1.5
 
 dev_dependencies:
   flutter_test:

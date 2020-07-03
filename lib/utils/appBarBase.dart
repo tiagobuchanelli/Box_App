@@ -23,6 +23,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      //centerTitle: true,
       title: Text(
         title,
         textAlign: TextAlign.left,

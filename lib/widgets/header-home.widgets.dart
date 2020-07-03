@@ -22,7 +22,7 @@ class _HeaderHomeState extends State<HeaderHome> {
               //padding: EdgeInsets.only(top: 0),
               color: Colors
                   .white, //AppTheme().primaryColor, //, //Theme.of(context).primaryColor,
-              height: 170,
+              height: 180,
               /*decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
