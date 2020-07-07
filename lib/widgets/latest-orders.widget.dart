@@ -40,7 +40,7 @@ class LatestOrders extends StatelessWidget {
             padding: EdgeInsets.only(top: 10, bottom: 5),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.all(Radius.circular(8)),
+              /*borderRadius: BorderRadius.all(Radius.circular(8)),
               border: Border.all(width: 0, color: Colors.transparent),
               boxShadow: [
                 BoxShadow(
@@ -49,7 +49,7 @@ class LatestOrders extends StatelessWidget {
                   blurRadius: 1,
                   offset: Offset(1, 1), // changes position of shadow
                 ),
-              ],
+              ],*/
             ),
             child: Column(
               children: <Widget>[

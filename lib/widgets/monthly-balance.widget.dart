@@ -49,7 +49,7 @@ class _MonthlyBalanceState extends State<MonthlyBalance> {
               padding: EdgeInsets.only(top: 0, bottom: 0, right: 20),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(8)),
+                /*borderRadius: BorderRadius.all(Radius.circular(8)),
                 border: Border.all(width: 0, color: Colors.transparent),
                 boxShadow: [
                   BoxShadow(
@@ -58,7 +58,7 @@ class _MonthlyBalanceState extends State<MonthlyBalance> {
                     blurRadius: 1,
                     offset: Offset(1, 1), // changes position of shadow
                   ),
-                ],
+                ],*/
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

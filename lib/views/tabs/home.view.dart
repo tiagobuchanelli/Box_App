@@ -90,10 +90,35 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   )
                 : Container(),
+            Container(
+              margin: EdgeInsets.only(top: 0, bottom: 20),
+              height: 10,
+              color: Colors.grey[100],
+            ),
             BankAccounts(),
+            Container(
+              margin: EdgeInsets.only(top: 30, bottom: 0),
+              height: 10,
+              color: Colors.grey[100],
+            ),
             MonthlyBalance(),
+            Container(
+              margin: EdgeInsets.only(top: 30, bottom: 0),
+              height: 10,
+              color: Colors.grey[100],
+            ),
             AccountBalance(),
+            Container(
+              margin: EdgeInsets.only(top: 30, bottom: 0),
+              height: 10,
+              color: Colors.grey[100],
+            ),
             LatestOrders(),
+            Container(
+              margin: EdgeInsets.only(top: 30, bottom: 0),
+              height: 10,
+              color: Colors.grey[100],
+            ),
             BoxGoals(),
             SizedBox(
               height: 50,
