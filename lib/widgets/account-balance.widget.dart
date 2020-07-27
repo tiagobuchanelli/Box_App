@@ -8,10 +8,11 @@ class AccountBalance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 10, right: 10, bottom: 0, top: 30),
+      margin: EdgeInsets.only(right: 0, bottom: 0, top: 30),
       child: Column(
         children: <Widget>[
           Container(
+            margin: EdgeInsets.only(left: 10, right: 10),
             color: Colors.white,
             child: Padding(
               padding:

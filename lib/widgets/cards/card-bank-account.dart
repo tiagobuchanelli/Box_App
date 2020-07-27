@@ -33,7 +33,7 @@ class CardBankAccount extends StatelessWidget {
           Expanded(
             flex: 1,
             child: Padding(
-              padding: EdgeInsets.only(left: 16, right: 0),
+              padding: EdgeInsets.only(left: 10, right: 0),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Icon(

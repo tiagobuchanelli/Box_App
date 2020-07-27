@@ -6,7 +6,6 @@ import 'package:boxapp/widgets/checkout-info-payment-total.widget.dart';
 import 'package:boxapp/widgets/checkout-info-payment.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CheckoutShoppingCart extends StatelessWidget {
   @override
@@ -36,7 +35,7 @@ class CheckoutShoppingCart extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: InfoTotalPayment(),
+      bottomNavigationBar: InfoTotalPayment("checkout"),
     );
   }
 }

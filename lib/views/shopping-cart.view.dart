@@ -1,12 +1,9 @@
 import 'package:boxapp/store/database-orders.store.dart';
-import 'package:boxapp/themes/app.theme.dart';
 import 'package:boxapp/utils/appBarBase.dart';
-import 'package:boxapp/utils/treatments/RouteGenerator.dart';
-import 'package:boxapp/views/shopping-cart-checkout.view.dart';
 import 'package:boxapp/widgets/cards/card-shopping-cart.dart';
+import 'package:boxapp/widgets/checkout-info-payment-total.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ShoppingCartView extends StatelessWidget {
   @override
@@ -57,67 +54,7 @@ class ShoppingCartView extends StatelessWidget {
           ),
         ],*/
             ),
-            child: Padding(
-              padding: const EdgeInsets.only(
-                  left: 20, right: 20, bottom: 20, top: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(
-                      left: 0,
-                      top: 0,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          "TOTAL",
-                          style: AppTheme()
-                              .textTheme
-                              .display4
-                              .copyWith(fontWeight: FontWeight.w600),
-                        ),
-                        Text(
-                          "R\$4250",
-                          style: AppTheme().textTheme.display4.copyWith(
-                                color: Theme.of(context).primaryColor,
-                                fontWeight: FontWeight.w600,
-                              ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: 40,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(5),
-                      ),
-                    ),
-                    margin: EdgeInsets.only(
-                      right: 0,
-                    ),
-                    child: FlatButton(
-                      child: Text(
-                        "CHECKOUT",
-                        style: AppTheme().textTheme.display4.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                            ),
-                      ),
-                      onPressed: () {
-                        Navigator.pushNamed(
-                            context, RouteGenerator.shoppingCheckout);
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            child: InfoTotalPayment("shoppingCart"),
           ),
         ],
       ),

@@ -1,9 +1,13 @@
 import 'package:boxapp/themes/app.theme.dart';
+import 'package:boxapp/utils/treatments/RouteGenerator.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class InfoTotalPayment extends StatelessWidget {
+  String route;
+
+  InfoTotalPayment(this.route);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,53 +35,88 @@ class InfoTotalPayment extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           //crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(
-                left: 0,
-                top: 0,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    "TOTAL",
-                    style: AppTheme().textTheme.display4.copyWith(
-                          fontWeight: FontWeight.w600,
-                        ),
-                  ),
-                  Text(
-                    "R\$4250",
-                    style: AppTheme().textTheme.display4.copyWith(
-                          color: Theme.of(context).primaryColor,
-                          fontWeight: FontWeight.w600,
-                        ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 40,
-              width: 150,
-              decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(5),
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: EdgeInsets.only(
+                  left: 0,
+                  top: 0,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      "TOTAL",
+                      style: AppTheme().textTheme.display4.copyWith(
+                            fontWeight: FontWeight.w600,
+                          ),
+                    ),
+                    Text(
+                      "R\$4250",
+                      style: AppTheme().textTheme.display4.copyWith(
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.w600,
+                          ),
+                    ),
+                  ],
                 ),
               ),
-              margin: EdgeInsets.only(
-                right: 0,
-              ),
-              child: FlatButton(
-                child: Text(
-                  "FINALIZAR",
-                  style: AppTheme().textTheme.display4.copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                      ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 0),
+                child: Container(
+                  margin: EdgeInsets.only(left: 10, right: 10),
+                  height: 40,
+                  padding: EdgeInsets.all(0),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                    border: Border.all(width: 0, color: Colors.transparent),
+                  ),
+                  child: Icon(
+                    FontAwesomeIcons.percentage,
+                    color: Colors.black87,
+                    size: 18,
+                  ),
                 ),
-                onPressed: () {},
               ),
             ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                height: 40,
+                //width: 150,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(5),
+                  ),
+                ),
+                margin: EdgeInsets.only(
+                  right: 0,
+                ),
+                child: FlatButton(
+                  child: Text(
+                    route == "shoppingCart" ? "CHECKOUT" : "FINALIZAR",
+                    style: AppTheme().textTheme.display4.copyWith(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ),
+                  ),
+                  onPressed: () {
+                    route == "shoppingCart"
+                        ? Navigator.pushNamed(
+                            context, RouteGenerator.shoppingCheckout)
+                        : Navigator.pushNamed(
+                            context,
+                            RouteGenerator
+                                .shoppingCheckout); //aqui na nultima colocar tela de resumo
+                  },
+                ),
+              ),
+            )
           ],
         ),
       ),

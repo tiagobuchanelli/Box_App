@@ -16,10 +16,11 @@ class _MonthlyBalanceState extends State<MonthlyBalance> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 10, right: 10, bottom: 0, top: 30),
+      margin: EdgeInsets.only(right: 10, bottom: 0, top: 30),
       child: Column(
         children: <Widget>[
           Container(
+            margin: EdgeInsets.only(left: 10),
             color: Colors.white,
             child: Padding(
               padding:
@@ -45,11 +46,11 @@ class _MonthlyBalanceState extends State<MonthlyBalance> {
           ),
           //Divider(height: 0.5, color: Colors.grey[300]),
           Container(
-              height: 210,
-              padding: EdgeInsets.only(top: 0, bottom: 0, right: 20),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                /*borderRadius: BorderRadius.all(Radius.circular(8)),
+            height: 210,
+            padding: EdgeInsets.only(top: 0, bottom: 0, right: 20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              /*borderRadius: BorderRadius.all(Radius.circular(8)),
                 border: Border.all(width: 0, color: Colors.transparent),
                 boxShadow: [
                   BoxShadow(
@@ -59,221 +60,229 @@ class _MonthlyBalanceState extends State<MonthlyBalance> {
                     offset: Offset(1, 1), // changes position of shadow
                   ),
                 ],*/
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Container(
-                    //height: 150,
-                    //color: Colors.red,
-                    width: 280,
+            ),
+            child: Column(
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(left: 10),
+                      //height: 150,
+                      //color: Colors.red,
+                      width: 280,
 
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      //crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          padding: EdgeInsets.only(
-                              left: 16, top: 20, bottom: 10, right: 5),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  Row(
-                                    children: <Widget>[
-                                      Align(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        //crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            padding: EdgeInsets.only(
+                                left: 10, top: 20, bottom: 10, right: 5),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Row(
+                                      children: <Widget>[
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Icon(
+                                            FontAwesomeIcons.spinner,
+                                            color: Colors.green,
+                                            size: 14,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 16, right: 0),
+                                          child: Align(
+                                            alignment: Alignment.centerLeft,
+                                            child: Text(
+                                              "Receitas",
+                                              style: AppTheme()
+                                                  .textTheme
+                                                  .display2
+                                                  .copyWith(
+                                                      color: Colors.green,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.only(left: 16, right: 0),
+                                      child: Align(
                                         alignment: Alignment.centerLeft,
-                                        child: Icon(
-                                          FontAwesomeIcons.spinner,
-                                          color: Colors.green,
-                                          size: 14,
+                                        child: Text(
+                                          "R\$251.500,65",
+                                          style: AppTheme()
+                                              .textTheme
+                                              .display2
+                                              .copyWith(
+                                                  color: Colors.green,
+                                                  fontWeight:
+                                                      FontWeight.normal),
                                         ),
                                       ),
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.only(left: 16, right: 0),
-                                        child: Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: Text(
-                                            "Receitas",
-                                            style: AppTheme()
-                                                .textTheme
-                                                .display2
-                                                .copyWith(
-                                                    color: Colors.green,
-                                                    fontWeight:
-                                                        FontWeight.w500),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding:
-                                        EdgeInsets.only(left: 16, right: 0),
-                                    child: Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        "R\$251.500,65",
-                                        style: AppTheme()
-                                            .textTheme
-                                            .display2
-                                            .copyWith(
-                                                color: Colors.green,
-                                                fontWeight: FontWeight.normal),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              SizedBox(
-                                height: 16,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  Row(
-                                    children: <Widget>[
-                                      Align(
-                                        alignment: Alignment.centerLeft,
-                                        child: Icon(
-                                          FontAwesomeIcons.spinner,
-                                          color: Colors.red,
-                                          size: 14,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.only(left: 16, right: 0),
-                                        child: Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: Text(
-                                            "Despesas",
-                                            style: AppTheme()
-                                                .textTheme
-                                                .display2
-                                                .copyWith(
-                                                    color: Colors.red,
-                                                    fontWeight:
-                                                        FontWeight.w500),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding:
-                                        EdgeInsets.only(left: 16, right: 0),
-                                    child: Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        "R\$20.500,65",
-                                        style: AppTheme()
-                                            .textTheme
-                                            .display2
-                                            .copyWith(color: Colors.red),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              SizedBox(
-                                height: 16,
-                              ),
-                              Divider(
-                                height: 0.5,
-                                color: Colors.grey[300],
-                              ),
-                              SizedBox(
-                                height: 16,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  Row(
-                                    children: <Widget>[
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.only(left: 0, right: 0),
-                                        child: Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: Text(
-                                            "Balanço",
-                                            style: AppTheme()
-                                                .textTheme
-                                                .display2
-                                                .copyWith(
-                                                    color: Colors.grey[600],
-                                                    fontWeight:
-                                                        FontWeight.w500),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding:
-                                        EdgeInsets.only(left: 16, right: 0),
-                                    child: Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        "R\$20.500,65",
-                                        style: AppTheme()
-                                            .textTheme
-                                            .display2
-                                            .copyWith(color: Colors.grey[600]),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(
-                              left: 0, top: 5, bottom: 0, right: 5),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              Align(
-                                alignment: Alignment.centerLeft,
-                                child: FlatButton(
-                                  splashColor: Theme.of(context)
-                                      .primaryColor
-                                      .withOpacity(0.3),
-                                  child: Text(
-                                    "DETALHES",
-                                    //textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                        color: Theme.of(context).primaryColor),
-                                  ),
-                                  onPressed: () {},
+                                    )
+                                  ],
                                 ),
-                              ),
-                            ],
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Row(
+                                      children: <Widget>[
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Icon(
+                                            FontAwesomeIcons.spinner,
+                                            color: Colors.red,
+                                            size: 14,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 16, right: 0),
+                                          child: Align(
+                                            alignment: Alignment.centerLeft,
+                                            child: Text(
+                                              "Despesas",
+                                              style: AppTheme()
+                                                  .textTheme
+                                                  .display2
+                                                  .copyWith(
+                                                      color: Colors.red,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.only(left: 16, right: 0),
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          "R\$20.500,65",
+                                          style: AppTheme()
+                                              .textTheme
+                                              .display2
+                                              .copyWith(color: Colors.red),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                Divider(
+                                  height: 0.5,
+                                  color: Colors.grey[300],
+                                ),
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Row(
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 0, right: 0),
+                                          child: Align(
+                                            alignment: Alignment.centerLeft,
+                                            child: Text(
+                                              "Balanço",
+                                              style: AppTheme()
+                                                  .textTheme
+                                                  .display2
+                                                  .copyWith(
+                                                      color: Colors.grey[600],
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.only(left: 16, right: 0),
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          "R\$20.500,65",
+                                          style: AppTheme()
+                                              .textTheme
+                                              .display2
+                                              .copyWith(
+                                                  color: Colors.grey[600]),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
-                        )
-                      ],
+                          Container(
+                            padding: EdgeInsets.only(
+                                left: 0, top: 5, bottom: 0, right: 5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      //color: Colors.blue,
+                      //alignment: Alignment.centerRight,
+                      height: 150,
+                      width: 60,
+                      child: BarChart(
+                        mainBarData(),
+                      ),
+                    ),
+                  ],
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                    margin: EdgeInsets.only(left: 0),
+                    child: FlatButton(
+                      splashColor:
+                          Theme.of(context).primaryColor.withOpacity(0.3),
+                      child: Text(
+                        "DETALES",
+                        //textAlign: TextAlign.left,
+                        style: TextStyle(color: Theme.of(context).primaryColor),
+                      ),
+                      onPressed: () {},
                     ),
                   ),
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    //color: Colors.blue,
-                    //alignment: Alignment.centerRight,
-                    height: 150,
-                    width: 60,
-                    child: BarChart(
-                      mainBarData(),
-                    ),
-                  ),
-                ],
-              )),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
