@@ -42,7 +42,7 @@ class SectionPageStocks extends StatelessWidget {
             color: Colors.white,
             //margin: EdgeInsets.symmetric(vertical: 20.0),
             padding: EdgeInsets.only(top: 10, bottom: 10),
-            height: 330.0,
+            height: 360.0,
             child: Padding(
               padding: EdgeInsets.only(left: 0, right: 0),
               child: ListView.builder(

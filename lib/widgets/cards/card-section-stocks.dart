@@ -123,6 +123,35 @@ class CardSection extends StatelessWidget {
                   ],
                 ),
                 Padding(
+                  padding: EdgeInsets.only(bottom: 8),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      "Estoque:",
+                      maxLines: 1,
+                      textAlign: TextAlign.left,
+                      style: AppTheme()
+                          .textTheme
+                          .headline3
+                          .copyWith(fontWeight: FontWeight.w500),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 10),
+                    ),
+                    Text(
+                      "600",
+                      maxLines: 1,
+                      textAlign: TextAlign.left,
+                      style: AppTheme()
+                          .textTheme
+                          .headline3
+                          .copyWith(fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                ),
+                Padding(
                   padding: EdgeInsets.only(bottom: 15),
                 ),
                 Container(

@@ -1,11 +1,11 @@
 import 'package:boxapp/store/database-stocks.store.dart';
+import 'package:boxapp/themes/app.theme.dart';
+import 'package:boxapp/utils/appBarBase.dart';
 import 'package:boxapp/widgets/category-list.widget.dart';
 import 'package:boxapp/widgets/section-page-stocks.widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:getflutter/components/carousel/gf_carousel.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class StockView extends StatefulWidget {
   @override
@@ -21,30 +21,42 @@ class _StockViewState extends State<StockView> {
     'https://static.paodeacucar.com/img/uploads/1/488/654488.jpg',
   ];
 
+  bool test = true;
   @override
   void initState() {
     // TODO: implement initState
+
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: BaseAppBar(
         backgroundColor: Colors.white,
-        /*appBar: AppBar(
-        title: Text(
-          "Dashboard",
-          textAlign: TextAlign.left,
-          style: GoogleFonts.poppins(
-              textStyle: TextStyle(color: Colors.white, fontSize: 24)),
-        ),
-        elevation: 0,
-        backgroundColor: Theme.of(context).primaryColor,
-      ),*/
-        body: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              Container(
+        title: "Produtos",
+        widgets: <Widget>[
+          GestureDetector(
+            child: Padding(
+              padding: EdgeInsets.only(right: 16),
+              child: Icon(
+                FontAwesomeIcons.search,
+                color: Colors.black54,
+                size: 20,
+              ),
+            ),
+            onTap: () {
+              test = false;
+              print(test);
+            },
+          )
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            /*Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(width: 0, color: Colors.white),
@@ -88,40 +100,69 @@ class _StockViewState extends State<StockView> {
                     ),
                   ),
                 ),
+              ),*/
+            Container(
+              margin: EdgeInsets.only(top: 10, bottom: 10),
+              height: 100,
+              child: CategoryList(),
+            ),
+            SizedBox(
+              height: 15,
+              child: Container(
+                color: Colors.grey[100],
               ),
-              Container(
-                margin: EdgeInsets.only(top: 10, bottom: 10),
-                height: 100,
-                child: CategoryList(),
-              ),
-              SizedBox(
-                height: 15,
-                child: Container(
-                  color: Colors.grey[100],
+            ),
+            SectionPageStocks('Promoções', listaCatPromo),
+            Container(
+              height: 10,
+              color: Colors.grey[100],
+            ),
+            SectionPageStocks('Suspensão', listaCatSuspensao),
+            Container(
+              height: 10,
+              color: Colors.grey[100],
+            ),
+            SectionPageStocks('Freios', listaCatFreios),
+            Container(
+              height: 10,
+              color: Colors.grey[100],
+            ),
+            SectionPageStocks('Motor', listaCatMotor),
+            Container(
+              height: 10,
+              color: Colors.grey[100],
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: test
+          ? Container(
+              height: 60,
+              color: AppTheme().primaryColor,
+              child: FlatButton(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      "Carrinho",
+                      style: AppTheme()
+                          .textTheme
+                          .headline1
+                          .copyWith(color: Colors.white),
+                    ),
+                    Text(
+                      "R\$ 90,00",
+                      style: AppTheme().textTheme.headline1.copyWith(
+                          color: Colors.white, fontWeight: FontWeight.w500),
+                    ),
+                  ],
                 ),
+                onPressed: () {
+                  print("Clicado em ver carrinho");
+                },
               ),
-              SectionPageStocks('Promoções', listaCatPromo),
-              Container(
-                height: 10,
-                color: Colors.grey[100],
-              ),
-              SectionPageStocks('Suspensão', listaCatSuspensao),
-              Container(
-                height: 10,
-                color: Colors.grey[100],
-              ),
-              SectionPageStocks('Freios', listaCatFreios),
-              Container(
-                height: 10,
-                color: Colors.grey[100],
-              ),
-              SectionPageStocks('Motor', listaCatMotor),
-              Container(
-                height: 10,
-                color: Colors.grey[100],
-              ),
-            ],
-          ),
-        ));
+            )
+          : null,
+    );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:boxapp/themes/app.theme.dart';
 import 'package:boxapp/utils/appBarBase.dart';
 import 'package:boxapp/widgets/list-customers.widget.dart';
 import 'package:flutter/material.dart';
@@ -32,6 +33,13 @@ class CustomersView extends StatelessWidget {
               ListCustomers(),
             ],
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            // Add your onPressed code here!
+          },
+          child: Icon(Icons.add),
+          backgroundColor: AppTheme().primaryColor,
         ));
   }
 }

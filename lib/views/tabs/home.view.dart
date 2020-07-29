@@ -148,7 +148,7 @@ class _HomeViewState extends State<HomeView> {
         children: [
           SpeedDialChild(
             child: Icon(
-              FontAwesomeIcons.cubes,
+              FontAwesomeIcons.shoppingCart,
               color: Theme.of(context).primaryColor,
               size: 20,
             ),
