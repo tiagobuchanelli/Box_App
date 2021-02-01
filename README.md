@@ -1,16 +1,29 @@
-# boxapp
+# Box APP 
 
-A new Flutter application.
+Project BoxAPP
+- Development of the structure and layout with data in mockup format.
+- Not real project.
 
-## Getting Started
+Current status:
+- Under development
 
-This project is a starting point for a Flutter application.
+## Screenshot
 
-A few resources to get you started if this is your first Flutter project:
+| Home  |  
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![bx1](https://user-images.githubusercontent.com/7735662/106476633-065bb200-6486-11eb-9935-98ee4160baff.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+![bx2](https://user-images.githubusercontent.com/7735662/106476643-06f44880-6486-11eb-97cd-dc3c92d3fd6a.png)  
+
+
+![bx3](https://user-images.githubusercontent.com/7735662/106476648-08257580-6486-11eb-86d2-873f25482c50.png)
+
+
+![bx6](https://user-images.githubusercontent.com/7735662/106476656-09ef3900-6486-11eb-8dc8-fa7d35f9a99b.png)
+
+
+| Cart Page | 
+
+![bx5](https://user-images.githubusercontent.com/7735662/106476651-0956a280-6486-11eb-95c0-6ccb5f5f02c4.png)
+
